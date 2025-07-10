@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.header {
+  background-color: #0d47a1;
+  color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn{
+    display: none;
+}
+.carousel-container{
+    width:95%;
+    height: 300px !important;
+}
+.read-more{
+    text-align:center;
+    margin-top: 24px;
+}
+/* .read-more a{
+    width:100%;
+} */
