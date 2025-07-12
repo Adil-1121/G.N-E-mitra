@@ -1,0 +1,55 @@
+.home-container {
+  height: auto;
+  display: flex;
+  justify-content: safe;
+}
+
+.left-home{
+  width: 50%;
+ background-color: gray;
+ text-align: center;
+}
+.left-container{
+  width:400px;
+  height:400px;
+  text-align: justify;
+  position: relative;
+  left:100px;
+  top:100px;
+}
+.left-container div > h1,h6{
+  text-align: center;
+}
+ .right-home {
+  width:50%;
+  background-color: burlywood;
+ 
+}
+
+
+
+footer {
+  background-color: #e6f8f3;
+  color: #0A7B54;
+  text-align: center;
+  padding: 5px;
+}
+
+.menu-list {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #0A7B54;
+  font-weight: 600;
+}
+
+.menu-list li a:hover {
+  text-decoration: underline;
+}
