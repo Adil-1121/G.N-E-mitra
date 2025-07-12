@@ -1,0 +1,193 @@
+/* Reset basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header overall look */
+.header {
+    background: linear-gradient(to right, #fdfdfd, #e6f0ff);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-out forwards;
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Logo Section */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+    margin-left: 25px;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.4s ease;
+}
+
+.logo:hover img {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.span-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0056b3;
+    transition: color 0.4s ease-in-out;
+}
+
+.logo:hover .span-logo {
+    color: #003d80;
+}
+
+/* Nav Tabs */
+.nav-tabs ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    transition: all 0.4s ease;
+}
+
+.nav-tabs li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav-tabs li a:hover {
+    background: #e6f0ff;
+    color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 86, 179, 0.2);
+}
+
+.tab-span {
+    margin-left: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-tabs li a:hover .tab-span {
+    font-weight: 600;
+}
+
+/* Scrolling banner */
+.scrolling-banner {
+    background: #e9f3ff;
+    color: #003366;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.scrolling-banner p {
+    animation: marquee 30s linear infinite;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-tabs ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ----------------------- Animations ----------------------- */
+
+/* 1. Slide Down Header */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 2. Marquee Text */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 3. Glow Effect */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 8px #add8ff;
+    }
+    to {
+        box-shadow: 0 0 20px #99ccff;
+    }
+}
+
+/* 4. Bounce Hover */
+.nav-tabs li a:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* 5. Logo Pop */
+.logo:hover {
+    animation: logoPop 0.6s ease-in-out;
+}
+
+@keyframes logoPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.07);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
