@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <link rel="icon" href="favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
@@ -371,7 +370,7 @@
                             <h2 class="contact-heading">Contact Us</h2>
                             <p class="contact-subheading">Feel free to reach out. We'll get back to you as soon as
                                 possible!</p>
-                            <form action="#" method="POST" class="contact-form">
+                            <form action="contact.php" method="POST" class="contact-form">
                                 <input type="text" name="name" class="contact-input" placeholder="Your Name" required />
                                 <input type="email" name="email" class="contact-input" placeholder="Your Email"
                                     required />
@@ -429,14 +428,12 @@
         <!-- === Contact Section End === -->
     </main>
     <!-- Main End -->
+
     <!-- Footer Start -->
+    <footer class="footer-section">
+        <div class="footer-container">
 
-    <!-- Fast Footer Section -->
-    <footer class="first-footer">
-        <div class="footer-columns">
-
-            <!-- About eMitra -->
-            <div class="footer-col">
+            <div class="footer-widget">
                 <h4>About eMitra Shop</h4>
                 <ul>
                     <li><a href="#">About Us</a></li>
@@ -447,8 +444,7 @@
                 </ul>
             </div>
 
-            <!-- eMitra Services -->
-            <div class="footer-col">
+            <div class="footer-widget">
                 <h4>Popular Services</h4>
                 <ul>
                     <li><a href="#">Bill Payment</a></li>
@@ -459,8 +455,7 @@
                 </ul>
             </div>
 
-            <!-- Customer Support -->
-            <div class="footer-col">
+            <div class="footer-widget">
                 <h4>Customer Support</h4>
                 <ul>
                     <li><a href="#">Your Account</a></li>
@@ -471,38 +466,47 @@
                 </ul>
             </div>
 
-            <!-- Connect with Us -->
-            <div class="footer-col">
+            <div class="footer-widget">
                 <h4>Connect with Us</h4>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">WhatsApp Support</a></li>
-                    <li><a href="#">Email Us</a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp Support</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Email Us</a></li>
                 </ul>
             </div>
+
         </div>
-    </footer>
-    <footer class="second-footer">
-        <div class="footer-container">
-            <div class="footer-pera">
+
+        <div class="footer-bottom">
+            <div class="footer-container bottom-flex">
+                <p class="copyright">
+                    &copy; 2025 <strong>eMitra Shop</strong>. All rights reserved.
+                </p>
+
+                <nav class="footer-nav">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                </nav>
+
                 <p>
-                    <span>&copy; 2025</span>
-                    <span>All rights reserved.</span>
+                    <span class="made-by">
+                        <span class="separator">|</span> Created by
+                        <!-- HTML -->
+                        <a href="https://ilmcore.com" rel="noopener" class="ilmcore-link" target="_blank">
+                            IlmCore Technologies
+                            <span class="arrow">➜</span>
+                        </a>
+
+                    </span>
                 </p>
             </div>
-            <div class="footer-list">
-                <ul>
-                    <li><a href="#">Terms of Services</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookies</a></li>
-                </ul>
-            </div>
         </div>
     </footer>
-    <!-- Footer End -->
 
+    <!-- Footer End -->
 
     <script src="js/main.js"></script>
     <script src="js/header.js"></script>
