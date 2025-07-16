@@ -1,0 +1,85 @@
+/* Theme Colors */
+:root {
+  --primary: #97704f;
+  --secondary: #009ce7;
+  --accent: #ffbc34;
+
+  --bg-light: #f7f7f7;
+  --bg-dark: #2b2b2f;
+
+  --text-primary: #333448;
+  --text-secondary: #757575;
+  --text-white: #ffffff;
+
+  --success: #55ce63;
+  --warning: #ffbc34;
+  --error: #e74c3c;
+}
+
+/* Body + Base */
+body {
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header / Navbar */
+header {
+  background: var(--primary);
+  color: var(--text-white);
+  padding: 15px 20px;
+}
+
+header a {
+  color: var(--text-white);
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+header a:hover {
+  color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background: #008ac7;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--text-white);
+}
+
+/* Card / Content Box */
+.card {
+  background: var(--text-white);
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin: 20px 0;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  padding: 20px;
+  text-align: center;
+}

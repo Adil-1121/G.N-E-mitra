@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GN E-mitra</title>
+
+    <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/main.css">
@@ -48,7 +50,7 @@
         <!-- === Home Section Start === -->
 
         <section class="home section" id="home">
-            <div class="home-container">
+            <div class="home-container d-flex justify-contain-space-between">   
                 <div class="carousel-container">
                     <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -92,7 +94,11 @@
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
-                </div>
+                </div> 
+            
+            <div class="notification" style="width: 300px; height: 600px; background-color: aquamarine;">
+
+            </div>
             </div>
         </section>
 
@@ -370,15 +376,18 @@
                             <h2 class="contact-heading">Contact Us</h2>
                             <p class="contact-subheading">Feel free to reach out. We'll get back to you as soon as
                                 possible!</p>
-                            <form id="contact-form" action="" method="POST" class="contact-form">
-                                <input type="text" id="name" name="name" class="contact-input" placeholder="Your Name"
-                                    required />
-                                <input type="email" id="email" name="email" class="contact-input"
-                                    placeholder="Your Email" required />
-                                <textarea id="message" name="message" class="contact-textarea" rows="4"
-                                    placeholder="Your Message" required></textarea>
+                           <form id="contact-form" action="" method="POST" class="contact-form">
+                                <input type="text" id="name" name="user_name" class="contact-input"
+                                    placeholder="Your Name" />
+                                <input type="email" id="email" name="user_email" class="contact-input"
+                                    placeholder="Your Email" />
+                                <input type="text" id="phone" name="user_phone" class="contact-input"
+                                    placeholder="Your Phone Number" />
+                                <textarea id="message" name="user_message" class="contact-textarea" rows="4"
+                                    placeholder="Your Message"></textarea>
                                 <button type="submit" class="contact-button">SEND MESSAGE</button>
                             </form>
+
                         </div>
                     </div>
 
@@ -651,27 +660,24 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        // Initialize EmailJS
-        (function () {
-            emailjs.init("vhfEAlT_r2FYls8WJ"); // Your public key
-        })();
+   
+    <!-- <script>
+         setGreeting(): void {
+           const hours = new Date().getHours();
+           if (hours >= 0 && hours < 5) {
+             this.greeting = 'Good Night';
+           } else if (hours >= 5 && hours < 12) {
+             this.greeting = 'Good Morning';
+           } else if (hours >= 12 && hours < 17) {
+             this.greeting = 'Good Afternoon';
+           } else if (hours >= 17 && hours < 21) {
+             this.greeting = 'Good Evening';
+           } else {
+             this.greeting = 'Good Night';
+           }
+         }
+    </script> -->
 
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const form = this; // Store form reference
-
-            emailjs.sendForm('service_2zkgojg', 'template_n4a4rie', form)
-                .then(function () {
-                    alert('Message sent successfully!');
-                    form.reset(); // Clear form fields
-                })
-                .catch(function (error) {
-                    alert('Failed to send message. Please try again later.');
-                    console.error('EmailJS Error:', error);
-                });
-        });
-    </script>
 </body>
 
 </html>
