@@ -941,13 +941,54 @@ section.home {
         flex: 1 1 100%;
     }
 }
-
-/* FAQ   */
-.heading-FAQ{
-    width: 100%;
-    text-align: center;
+/* Form Toast Style */
+.toast {
+    background: rgba(255, 255, 255, 0.1); /* light transparent white */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    color: #fff !important;  /* pure white text */
+    font-weight: 600;
+    min-width: 250px;
+    transition: all 0.3s ease;
 }
- .FAQ-heading {
+
+/* Success toast glass neon hint */
+.toast.bg-success {
+    border-color: rgba(0, 255, 128, 0.4);
+    box-shadow: 0 0 12px 3px rgba(0, 255, 128, 0.4);
+    color: white !important;
+}
+
+/* Danger toast glass neon hint */
+.toast.bg-danger {
+    border-color: rgba(255, 0, 80, 0.4);
+    box-shadow: 0 0 12px 3px rgba(255, 0, 80, 0.4);
+    color: white !important;
+}
+
+/* Close button tweaks */
+.toast .btn-close {
+    filter: brightness(0.85);
+    transition: filter 0.2s ease;
+}
+
+.toast .btn-close:hover {
+    filter: brightness(1);
+}
+
+/* FAQ Style */
+.FAQ-section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #2d3436;
+}
+
+.FAQ-heading {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 12px;
@@ -957,7 +998,11 @@ section.home {
     position: relative;
     display: inline-block;
     transition: color 0.4s ease, transform 0.4s ease;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    animation: none;
 }
+
 /* Decorative underline effect */
 .FAQ-heading::after {
     content: "";
@@ -970,6 +1015,7 @@ section.home {
     border-radius: 5px;
     transition: width 0.4s ease;
 }
+
 .FAQ-heading:hover {
     color: #6c5ce7;
     transform: translateY(-2px);
@@ -978,17 +1024,209 @@ section.home {
 .FAQ-heading:hover::after {
     width: 100%;
 }
-.FAQ-body{
-    flex: 1 1 48%;
-    background: #fff;
-    width: 1000px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    padding: 40px 30px;
-    transition: all 0.4s ease;
-    margin: 20px auto;
-}
-.accordion-item>.accordion-header .accordion-button{
-    font-weight: 600;
+
+/* Accordion Container */
+.accordion-flush {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        0 12px 24px rgba(44, 62, 80, 0.12),
+        0 4px 8px rgba(44, 62, 80, 0.06);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(108, 92, 231, 0.15);
+    transition: box-shadow 0.4s ease;
 }
 
+.accordion-flush:hover {
+    box-shadow:
+        0 18px 36px rgba(108, 92, 231, 0.4),
+        0 8px 20px rgba(9, 132, 227, 0.3);
+}
+
+/* Each Accordion Item */
+.accordion-item {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    transition: background 0.4s ease;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+/* Accordion Button */
+.accordion-button {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3436;
+    padding: 18px 24px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.accordion-button.collapsed:hover {
+    background-color: #dfe6e9;
+    color: #0984e3;
+    transform: scale(1.02);
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #6c5ce7, #0984e3);
+    color: #fff;
+    box-shadow:
+        0 0 12px rgba(108, 92, 231, 0.7),
+        0 0 18px rgba(9, 132, 227, 0.7);
+    animation: pulse 2s infinite;
+}
+
+/* Accordion Body */
+.accordion-body {
+    font-size: 15px;
+    color: #555;
+    padding: 16px 24px 24px;
+    line-height: 1.7;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 16px 16px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.04);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Icons rotation on toggle */
+.accordion-button::after {
+    transition: transform 0.4s ease;
+    font-size: 24px;
+    color: inherit;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+/* === Animations === */
+
+/* fadeInUp from existing */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse glow animation */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow:
+            0 0 12px rgba(108, 92, 231, 0.7),
+            0 0 18px rgba(9, 132, 227, 0.7);
+    }
+    50% {
+        box-shadow:
+            0 0 20px rgba(108, 92, 231, 1),
+            0 0 28px rgba(9, 132, 227, 1);
+    }
+}
+
+/* RubberBand effect for button press */
+@keyframes rubberBand {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* FlipInX for accordion button on load */
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+/* ZoomIn for entire FAQ section load */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Applying some animations on load */
+.FAQ-container {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.accordion-button {
+    animation: flipInX 0.7s ease forwards;
+    transform-origin: center bottom;
+}
+
+/* On button active click */
+.accordion-button:active {
+    animation: rubberBand 0.7s ease;
+}
+
+/* Transition on collapse */
+.accordion-collapse {
+    transition: max-height 0.5s ease, padding 0.4s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .FAQ-section {
+        margin: 40px 10px;
+    }
+
+    .FAQ-heading {
+        font-size: 28px;
+    }
+
+    .accordion-button {
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+
+    .accordion-body {
+        font-size: 14px;
+        padding: 14px 20px 20px;
+    }
+}
