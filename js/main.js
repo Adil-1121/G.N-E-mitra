@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const myCarousel = document.querySelector('#homeCarousel');
-    
+
     if (myCarousel) {
         const carousel = new bootstrap.Carousel(myCarousel, {
             interval: 3000,   // Auto-slide every 3 seconds
@@ -154,4 +154,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // FAQ section code
-    new WOW().init();
+new WOW().init();
+

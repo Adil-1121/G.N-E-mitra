@@ -6,109 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GN E-mitra</title>
 
-    <link rel="stylesheet" href="css/root.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
 
 <body>
+
     <!-- Header Start -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <a href="#home">
-                    <img src="images/csp-logo.png" alt="logo" />
-                    <span class="span-logo">G.N E-MITRA</span>
-                </a>
-            </div>
-            <div class="nav-tabs">
-                <ul>
-                    <li><a href="#home"><i class="fa fa-home"></i><span class="tab-span"> Home</span></a></li>
-                    <li><a href="#about"><i class="fa fa-info-circle"></i><span class="tab-span"> About</span></a></li>
-                    <li><a href="#service"><i class="fa fa-cogs"></i><span class="tab-span"> Services</span></a></li>
-                    <li><a href="#contact"><i class="fa fa-envelope"></i><span class="tab-span"> Contact Us</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="scrolling-banner">
-            <p>
-                Welcome to G.N E-Mitra – Your Trusted Digital Seva Center! &nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;
-                Services: Aadhaar Card Update & Print | PAN Card Apply & Correction | Ration Card Apply | Electricity /
-                Water Bill Payment | Birth/Death Certificate Application | E-Mitra Government Forms | Mobile Recharge &
-                DTH | Online Payment Gateway | Bank Account Opening Support | E-Medical & Scholarship Form
-            </p>
-        </div>
-    </header>
+    <div id="header"></div>
     <!-- Header End -->
+
     <!-- Main Start -->
     <main>
+
         <!-- === Home Section Start === -->
-
         <section class="home section" id="home">
-            <div class="home-container d-flex justify-contain-space-between">   
-                <div class="carousel-container">
-                    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+       <div class="row">
+        <div class="col-8">
 
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
-                        </div>
-
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/home-1.jpg" class="d-block w-100" alt="E-Mitra Services">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Welcome to G.N E-Mitra</h5>
-                                    <p>Fast & Reliable Digital Services at Your Doorstep.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/home-2.jpg" class="d-block w-100" alt="Digital Seva Center">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Government Forms & Bill Payment</h5>
-                                    <p>Get your work done hassle-free.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/home-3.jpg" class="d-block w-100" alt="Aadhar PAN Services">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>All in One Digital Help Desk</h5>
-                                    <p>From Aadhar to PAN — Everything under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Controls -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
+            <div class="carousel-container">
+                <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+ 
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
                     </div>
-                </div> 
-            
-            <div class="notification" style="width: 300px; height: 600px; background-color: aquamarine;">
+ 
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/home-1.jpg" class="d-block w-100" alt="E-Mitra Services">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Welcome to G.N E-Mitra</h5>
+                                <p>Fast & Reliable Digital Services at Your Doorstep.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/home-2.jpg" class="d-block w-100" alt="Digital Seva Center">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Government Forms & Bill Payment</h5>
+                                <p>Get your work done hassle-free.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/home-3.jpg" class="d-block w-100" alt="Aadhar PAN Services">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>All in One Digital Help Desk</h5>
+                                <p>From Aadhar to PAN — Everything under one roof.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div> 
+        </div>
+        <div class="col-4">
+            <div class="notification" style="height: 500px; width: 450px; background: beige; padding: 20px; font-size: 15px;">
+                <!-- RIGHT: Notification Sticky Note -->
+                    <div class="notification-note w-300">
+                        <div class="pin"></div>
+                        <div class="notification-list">
+                            <ul>
+                                <li><i class="fa fa-caret-right"></i> <strong>Electricity Bill</strong> payment
+                                    service is now available online.</li>
+                                <li><i class="fa fa-caret-right"></i>Apply for <strong>Ration Card</strong> updates
+                                    & new registration easily.</li>
+                                <li><i class="fa fa-caret-right"></i>Download your <strong>Annual Bank
+                                        Statement</strong> for this financial year.</li>
+                                <li><i class="fa fa-caret-right"></i><strong>Server maintenance</strong> scheduled
+                                    on 28 July, 2 AM - 4 AM.</li>
+                                <li><i class="fa fa-caret-right"></i>Get instant <strong>Aadhar PVC Card</strong>
+                                    printing at our center.</li>
+                                <li><i class="fa fa-caret-right"></i><strong>Never share your OTP</strong> or
+                                    password with anyone, even if they claim
+                                    to be from eMitra.</li>
+                                <li><i class="fa fa-caret-right"></i>Always check the website URL – it should start
+                                    with <strong>https://</strong> for
+                                    a secure connection.</li>
+                                <li><i class="fa fa-caret-right"></i>Avoid using public Wi-Fi while making online
+                                    payments.</li>
+                                <li><i class="fa fa-caret-right"></i>eMitra will <strong>never ask for your bank
+                                        details</strong> over phone or SMS.
+                                </li>
+                                <li><i class="fa fa-caret-right"></i>Update your password regularly to keep your
+                                    account safe.</li>
+                            </ul>
+                        </div>
+                    </div>  
+            </div>
+        </div>
 
-            </div>
-            </div>
+       </div>  
         </section>
-
         <!-- === Home Section End === -->
-        <!-- === About Section Start === -->
 
+        <!-- === About Section Start === -->
         <section class="about section" id="about">
             <div class="about-container">
                 <!-- Left: Image Section -->
@@ -160,12 +169,10 @@
                 </div>
             </div>
         </section>
-
         <!-- === About Section End === -->
 
         <!-- === Service Section Start === -->
-
-        <section class="service-section" id="service">
+        <section class="service section" id="service">
             <div class="about-container">
                 <div class="heading-service">
                     <h2 class="service-heading">Our Services</h2>
@@ -310,68 +317,10 @@
                 </div>
             </div>
         </section>
-
         <!-- === Service Section End === -->
-        <!-- === Privacy Section Start === -->
-        <!-- <section class="privacy section" id="privacy">
-            <h1>Privacy Policy</h1>
 
-            <h2>Who We Are</h2>
-            <p>Our website address is: <a href="#privacy" target="_blank">http://127.0.0.1:5500/index.html</a></p>
-
-            <h2>Comments</h2>
-            <p>When visitors leave comments on the site, we collect the data shown in the comments form, along with the
-                visitor’s IP address and browser user agent string to help with spam detection.</p>
-            <p>An anonymized string created from your email address (also called a hash) may be sent to the Gravatar
-                service to see if you are using it. The Gravatar service privacy policy is available at <a
-                    href="http://127.0.0.1:5500/index.html" target="_blank">http://127.0.0.1:5500/index.html</a>. After
-                your comment is approved, your profile picture will be visible to the public along with your comment.
-            </p>
-
-            <h2>Media</h2>
-            <p>If you upload images to the website, please avoid uploading images with embedded location data (EXIF
-                GPS), as visitors can download and extract this data from the images.</p>
-
-            <h2>Cookies</h2>
-            <p>If you leave a comment on our site, you may choose to save your name, email address, and website in
-                cookies. These are for your convenience so you do not have to fill in your details again. These cookies
-                will last for one year.</p>
-            <p>If you visit our login page, a temporary cookie will be set to determine if your browser accepts cookies.
-                This cookie contains no personal data and is discarded when you close your browser.</p>
-            <p>When you log in, several cookies will be set to save your login information and display preferences.
-                Login cookies last for two days, and display cookies last for one year. Selecting “Remember Me” will
-                keep you logged in for two weeks. Logging out removes these cookies.</p>
-            <p>If you edit or publish an article, an additional cookie will be stored in your browser, which contains no
-                personal data — only the post ID. It expires after one day.</p>
-
-            <h2>Embedded Content from Other Websites</h2>
-            <p>Articles on this site may include embedded content (e.g., videos, images, articles, etc.). Embedded
-                content behaves the same as if the visitor has visited the original website.</p>
-            <p>These websites may collect data about you, use cookies, and track your interaction with the content,
-                especially if you are logged into that website.</p>
-
-            <h2>Who We Share Your Data With</h2>
-            <p>If you request a password reset, your IP address may be included in the reset email.</p>
-
-            <h2>How Long We Retain Your Data</h2>
-            <p>If you leave a comment, it and its metadata are retained indefinitely. This helps us recognize and
-                approve follow-up comments automatically instead of holding them for moderation.</p>
-            <p>For registered users (if any), we store personal information in their user profile. All users can view,
-                edit, or delete their information at any time (except username). Website administrators can also view
-                and edit this information.</p>
-
-            <h2>Your Rights Over Your Data</h2>
-            <p>If you have an account or have left comments, you can request an exported file of the personal data we
-                hold about you. You can also request that we erase your personal data — except for any data we are
-                required to keep for legal, administrative, or security purposes.</p>
-
-            <h2>Where Your Data Is Sent</h2>
-            <p>Visitor comments may be checked through an automated spam detection service.</p>
-        </section> -->
-        <!-- === Privacy Section End === -->
         <!-- === Contact Section Start === -->
-
-        <section class="contact-section section" id="contact">
+        <section class="contact section" id="contact">
             <div class="contact-container">
                 <div class="contact-grid">
                     <!-- Left Panel: Contact Form -->
@@ -380,7 +329,7 @@
                             <h2 class="contact-heading">Contact Us</h2>
                             <p class="contact-subheading">Feel free to reach out. We'll get back to you as soon as
                                 possible!</p>
-                           <form id="contact-form" action="" method="POST" class="contact-form">
+                            <form id="contact-form" action="" method="POST" class="contact-form">
                                 <input type="text" id="name" name="user_name" class="contact-input"
                                     placeholder="Your Name" />
                                 <input type="email" id="email" name="user_email" class="contact-input"
@@ -440,8 +389,9 @@
             </div>
         </section>
         <!-- === Contact Section End === -->
+
         <!-- === FAQ Section Start === -->
-        <section class="FAQ-section py-5" id="FAQ">
+        <section class="FAQ section py-5" id="FAQ">
             <div class="container FAQ-container animate__animated animate__fadeInUp">
                 <div class="text-center mb-5">
                     <h2 class="FAQ-heading display-5 fw-bold text-gradient">Frequently Asked Questions</h2>
@@ -553,112 +503,24 @@
         </section>
         <!-- === FAQ Section End === -->
 
+        <!-- === revies Section Start === -->
+        <section>
+        </section>
+        <!-- === revies Section End === -->
+
     </main>
     <!-- Main End -->
 
     <!-- Footer Start -->
-    <footer class="footer-section">
-        <div class="footer-container">
-
-            <div class="footer-widget">
-                <h4>About eMitra Shop</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Latest Updates</a></li>
-                    <li><a href="#">Customer Reviews</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-widget">
-                <h4>Popular Services</h4>
-                <ul>
-                    <li><a href="#">Bill Payment</a></li>
-                    <li><a href="#">Recharge & Top-up</a></li>
-                    <li><a href="#">Utility Services</a></li>
-                    <li><a href="#">Government Forms</a></li>
-                    <li><a href="#">Ticket Booking</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-widget">
-                <h4>Customer Support</h4>
-                <ul>
-                    <li><a href="#">Your Account</a></li>
-                    <li><a href="#">Order Tracking</a></li>
-                    <li><a href="#">Refund & Cancellation</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-widget">
-                <h4>Connect with Us</h4>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp Support</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Email Us</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <div class="footer-container bottom-flex">
-                <p class="copyright">
-                    &copy; 2025 <strong>eMitra Shop</strong>. All rights reserved.
-                </p>
-
-                <nav class="footer-nav">
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookies</a>
-                </nav>
-
-                <p>
-                    <span class="made-by">
-                        <span class="separator">|</span> Created by
-                        <!-- HTML -->
-                        <a href="https://ilmcore.com" rel="noopener" class="ilmcore-link" target="_blank">
-                            IlmCore Technologies
-                            <span class="arrow">➜</span>
-                        </a>
-
-                    </span>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Footer End -->
-    <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 1055;"></div>
+    <div id="footer"></div>
+     <!-- Footer End -->
 
     <script src="js/main.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   
-    <!-- <script>
-         setGreeting(): void {
-           const hours = new Date().getHours();
-           if (hours >= 0 && hours < 5) {
-             this.greeting = 'Good Night';
-           } else if (hours >= 5 && hours < 12) {
-             this.greeting = 'Good Morning';
-           } else if (hours >= 12 && hours < 17) {
-             this.greeting = 'Good Afternoon';
-           } else if (hours >= 17 && hours < 21) {
-             this.greeting = 'Good Evening';
-           } else {
-             this.greeting = 'Good Night';
-           }
-         }
-    </script> -->
-
+    <script src="js/loadComponent.js" defer></script>
 </body>
 
 </html>
