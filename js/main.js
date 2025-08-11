@@ -1,5 +1,4 @@
 // Home Section Code
-
 document.addEventListener("DOMContentLoaded", function () {
     const myCarousel = document.querySelector('#homeCarousel');
 
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // About Section Code
-
 document.addEventListener("DOMContentLoaded", function () {
 
     // 1. Smooth Scroll to #service
@@ -153,6 +151,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// FAQ section code
-new WOW().init();
+// For Notification Box
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.querySelector('.notification-list');
+  const container = document.querySelector('.notification-container');
 
+  if (list && container) {
+    container.addEventListener('mouseenter', () => {
+      list.style.animationPlayState = 'paused';
+    });
+
+    container.addEventListener('mouseleave', () => {
+      list.style.animationPlayState = 'running';
+    });
+  } else {
+    console.warn("Notification elements not found");
+  }
+});
+
+// End 
