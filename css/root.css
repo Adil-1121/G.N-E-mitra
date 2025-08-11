@@ -1,0 +1,49 @@
+:root {
+  /* 🎨 Core Brand Colors */
+  --color-mint-green: #98FFB8;        /* Fresh Mint */
+  --color-teal: #00796B;              /* Deep Teal */
+  --color-gold: #D4AF37;              /* Metallic Gold */
+
+  /* 🖤 Base Background & Text Colors */
+  --color-charcoal-black: #1C1C1C;    /* Dark background */
+  --color-white: #FFFFFF;             /* Pure White */
+  --color-muted-grey: #B0B0B0;        /* Soft Silver */
+  --color-light-beige: #F5F1E6;       /* Warm Sand */
+
+  /* 🔤 Typography (Font Families) */
+  --font-heading-serif: 'Playfair Display', serif;
+  --font-heading-sans: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif; /* or 'Lato', sans-serif */
+  --font-mono: 'DM Mono', monospace;
+
+  /* ✨ UI Enhancements */
+  --border-radius-large: 25px;
+  --transition-fast: 0.3s ease-in-out;
+  --transition-smooth: 0.5s ease;
+
+  /* Optional Effects */
+  --gold-glow: 0 0 10px rgba(212, 175, 55, 0.6);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+body {
+  background-color: var(--color-muted-grey);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+section{
+  height: auto;
+  width: auto;
+  margin: 20px;
+}
+h1, h2, h3 {
+  color: var(--color-gold);
+  font-family: var(--font-heading-serif);
+}
+
+button.cta {
+  background-color: var(--color-mint-green);
+  color: var(--color-deep-teal);
+  border-radius: var(--border-radius-large);
+  transition: var(--transition-fast);
+}

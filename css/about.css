@@ -1,0 +1,244 @@
+
+/* About Section Style */
+.about {
+    padding: 80px 20px;
+    color: #1a1a1a;
+    animation: fadeInSection 1.2s ease-in-out both;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+
+.heading-about {
+    width: 100%;
+    text-align: center;
+}
+
+.about-heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #2d3436;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+/* Decorative underline effect */
+.about-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #0984e3, #6c5ce7);
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+
+.about-heading:hover {
+    color: #6c5ce7;
+    transform: translateY(-2px);
+}
+
+.about-heading:hover::after {
+    width: 100%;
+}
+
+.about-left {
+    flex: 1 1 40%;
+    animation: fadeInLeft 1s ease-out both;
+    transition: transform 0.4s ease-in-out;
+}
+
+.about-image-box img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 100px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image-box img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+
+.about-right {
+    flex: 1 1 55%;
+    background: linear-gradient(to bottom right, #f0f7ff, #ffffff);
+    padding: 36px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    animation: fadeInRight 1s ease-out both;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.about-right:hover {
+    box-shadow: 0 14px 32px rgba(31, 117, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Title Animation & Style */
+.about-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0f2027;
+    margin-bottom: 24px;
+    position: relative;
+    animation: headingReveal 0.8s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Lead / Subheading */
+.about-lead {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c5364;
+    margin-bottom: 22px;
+    transition: all 0.4s ease;
+}
+
+.about-lead:hover {
+    color: #1f75ff;
+    transform: translateX(6px) scale(1.02);
+}
+
+/* Main Content Text */
+.about-content p {
+    margin-bottom: 18px;
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+.about-content p:hover {
+    transform: scale(1.015);
+    background-color: rgba(0, 123, 255, 0.05);
+    padding-left: 6px;
+    border-left: 3px solid #007bff;
+    border-radius: 4px;
+}
+
+.about-content p i {
+    color: #007bff;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* CTA / Read More Link */
+.about-link span {
+    display: inline-block;
+    margin-top: 14px;
+    font-weight: 600;
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.about-link span::after {
+    content: ' →';
+    margin-left: 6px;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.about-link span:hover {
+    color: #0056b3;
+}
+
+.about-link span:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+
+/* === Animations === */
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes headingReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial hidden state for about section */
+.about {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-in-out;
+}
+
+.about.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
