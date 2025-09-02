@@ -12,3 +12,4 @@ window.addEventListener('DOMContentLoaded', () => {
   loadComponent('footer', 'common-component/footer.html');
   loadComponent('chatbot', 'common-component/chatbot.html'); // chatbot bhi load karo
 });
+
