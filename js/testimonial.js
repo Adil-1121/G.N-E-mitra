@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
             stars += i <= rating ? '<i class="fa-solid fa-star text-warning"></i>' : '<i class="fa-regular fa-star text-warning"></i>';
           }
 
-          const avatarUrl = review.image_url 
-            ? `ttps://gn-emitra-backend.onrender.com${review.image_url}` 
-            : 'https://randomuser.me/api/portraits/lego/1.jpg';
+         const avatarUrl = review.image_url 
+  ? `https://gn-emitra-backend.onrender.com${review.image_url}` 
+  : 'https://randomuser.me/api/portraits/lego/1.jpg';
 
           const carouselItem = `
             <div class="carousel-item ${activeClass}">
