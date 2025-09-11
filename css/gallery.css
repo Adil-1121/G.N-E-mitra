@@ -1,0 +1,66 @@
+.gallery-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px 20px;
+}
+
+/* Heading */
+.service-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004085;
+}
+
+/* Filter Buttons */
+.filters .btn {
+  background-color: #e2e6ea;
+  color: #333;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.filters .btn:hover,
+.filters .btn.active {
+  background-color: #004085;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 64, 133, 0.4);
+}
+
+/* Gallery Items */
+.gallery-item .card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.img-placeholder {
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px 0;
+  user-select: none;
+  background: linear-gradient(135deg, #f0f4f8, #e2e6ea);
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .service-heading {
+    font-size: 1.6rem;
+  }
+
+  .img-placeholder {
+    font-size: 2.5rem;
+  }
+}
