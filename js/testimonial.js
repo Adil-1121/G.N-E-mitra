@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const carouselInner = document.querySelector('#testimonialCarousel .carousel-inner');
 
-  // Fetch and render reviews from backend
+  function showToast(toastId) {
+  const toastEl = document.getElementById(toastId);
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
+}
+
+  // Fetch and render reviews
   function loadReviews() {
-    fetch('http://127.0.0.1:5000/api/review')
+    fetch('https://gn-emitra-backend.onrender.com/api/review')
       .then(response => response.json())
       .then(reviews => {
         const filteredReviews = reviews.filter(r => r.name && r.name.trim() !== '');
-
         carouselInner.innerHTML = '';
 
         if (filteredReviews.length === 0) {
           carouselInner.innerHTML = `
             <div class="carousel-item active">
-              <div class="glass-card d-flex align-items-start gap-3">
-                <div>No reviews found.</div>
+              <div class="glass-card d-flex justify-content-center align-items-center">
+                <p class="text-muted">No reviews found.</p>
               </div>
             </div>`;
           return;
@@ -22,34 +27,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         filteredReviews.forEach((review, index) => {
           const activeClass = index === 0 ? 'active' : '';
+          const rating = parseInt(review.rating) || 0;
 
           let stars = '';
-          const rating = parseInt(review.rating) || 0;
           for (let i = 1; i <= 5; i++) {
-            stars += i <= rating ? '★' : '☆';
+            stars += i <= rating ? '<i class="fa-solid fa-star text-warning"></i>' : '<i class="fa-regular fa-star text-warning"></i>';
           }
 
-          // Avatar image (use uploaded image or fallback)
-const avatarUrl = review.image_url 
-  ? `http://127.0.0.1:5000${review.image_url}` 
-  : 'https://randomuser.me/api/portraits/lego/1.jpg';
+          const avatarUrl = review.image_url 
+            ? `ttps://gn-emitra-backend.onrender.com${review.image_url}` 
+            : 'https://randomuser.me/api/portraits/lego/1.jpg';
 
           const carouselItem = `
             <div class="carousel-item ${activeClass}">
-              <div class="glass-card d-flex align-items-start gap-3">
-                <div class="me-3 mt-3">
+<div class="glass-card d-flex flex-row align-items-start gap-3">
+                <div class="me-3 avatar-icon-box">
                   <div class="avatar">
-                    <img src="${avatarUrl}" alt="avatar" style="width:100%; height:100%; object-fit:cover;">
+                    <img src="${avatarUrl}" alt="avatar" class="w-100 h-100 object-fit-cover">
                   </div>
                 </div>
                 <div class="info flex-grow-1">
-                  <div class="d-flex justify-content-between align-items-start">
+                  <div class="d-flex justify-content-between align-items-start flex-wrap">
                     <div>
-                      <h5 class="mb-1">${review.name}</h5>
+                      <h5 class="mb-1 fw-bold">${review.name}</h5>
                       <small class="text-muted">${review.city || ''}</small>
                     </div>
                     <div class="text-end">
-                      <div class="mb-1 text-warning" style="font-size: 1.2rem;">${stars}</div>
+                      <div class="mb-1">${stars}</div>
                       <small class="text-muted">Rating</small>
                     </div>
                   </div>
@@ -65,8 +69,8 @@ const avatarUrl = review.image_url
       .catch(err => {
         console.error('Failed to fetch reviews:', err);
         carouselInner.innerHTML = `<div class="carousel-item active">
-          <div class="glass-card d-flex align-items-start gap-3">
-            <div>Error loading reviews.</div>
+          <div class="glass-card d-flex justify-content-center align-items-center">
+            <p class="text-danger">Unable to fetch data.</p>
           </div>
         </div>`;
       });
@@ -83,12 +87,8 @@ const avatarUrl = review.image_url
       selectedRating = idx + 1;
       updateStars(selectedRating);
     });
-    star.addEventListener('mouseover', () => {
-      updateStars(idx + 1);
-    });
-    star.addEventListener('mouseout', () => {
-      updateStars(selectedRating);
-    });
+    star.addEventListener('mouseover', () => updateStars(idx + 1));
+    star.addEventListener('mouseout', () => updateStars(selectedRating));
   });
 
   function updateStars(rating) {
@@ -106,58 +106,68 @@ const avatarUrl = review.image_url
   // Handle form submit
   const saveBtn = document.querySelector('#editProfileModal .btn-primary');
   saveBtn.addEventListener('click', () => {
-    const name = document.getElementById('reviewUsername').value.trim();
-    const city = document.getElementById('reviewCity').value.trim();
-    const email = document.getElementById('reviewEmail').value.trim();
-    const comment = document.getElementById('reviewComment').value.trim();
-    const imageInput = document.getElementById('reviewImage');
-    const imageFile = imageInput.files[0];
+  const name = document.getElementById('reviewUsername').value.trim();
+  const city = document.getElementById('reviewCity').value.trim();
+  const email = document.getElementById('reviewEmail').value.trim();
+  const comment = document.getElementById('reviewComment').value.trim();
+  const imageInput = document.getElementById('reviewImage');
+  const imageFile = imageInput.files[0];
 
-    if (!name || !city || !email || !comment || selectedRating === 0) {
-      alert('Please fill all fields and select a rating.');
-      return;
-    }
+  if (!name || !city || !email || !comment || selectedRating === 0) {
+    showToast('reviewWarningToast');
+    return;
+  }
 
-    const formData = new FormData();
-    formData.append('name', name);
-    formData.append('city', city);
-    formData.append('email', email);
-    formData.append('rating', selectedRating);
-    formData.append('comment', comment);
-    if (imageFile) {
-      formData.append('image', imageFile);
-    }
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('city', city);
+  formData.append('email', email);
+  formData.append('rating', selectedRating);
+  formData.append('comment', comment);
+  if (imageFile) formData.append('image', imageFile);
 
-    fetch('http://127.0.0.1:5000/api/review', {
-      method: 'POST',
-      body: formData
+  fetch('https://gn-emitra-backend.onrender.com/api/review', {
+    method: 'POST',
+    body: formData
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === 'success') {
+        showToast('reviewSuccessToast');
+
+        // Reset form
+        document.getElementById('reviewUsername').value = '';
+        document.getElementById('reviewCity').value = '';
+        document.getElementById('reviewEmail').value = '';
+        document.getElementById('reviewComment').value = '';
+        imageInput.value = '';
+        selectedRating = 0;
+        updateStars(0);
+
+        const modal = bootstrap.Modal.getInstance(document.getElementById('editProfileModal'));
+        modal.hide();
+
+        loadReviews();
+      } else {
+        showToast('reviewErrorToast');
+      }
     })
-      .then(res => res.json())
-      .then(data => {
-        if (data.status === 'success') {
-          alert('Review submitted successfully!');
-          // Clear form
-          document.getElementById('reviewUsername').value = '';
-          document.getElementById('reviewCity').value = '';
-          document.getElementById('reviewEmail').value = '';
-          document.getElementById('reviewComment').value = '';
-          imageInput.value = '';
-          selectedRating = 0;
-          updateStars(0);
+    .catch(err => {
+      console.error('Error submitting review:', err);
+      showToast('reviewErrorToast');
+    });
+});
+// Reset form when modal is closed (even without saving)
+const reviewModalEl = document.getElementById('editProfileModal');
+reviewModalEl.addEventListener('hidden.bs.modal', () => {
+  document.getElementById('reviewUsername').value = '';
+  document.getElementById('reviewCity').value = '';
+  document.getElementById('reviewEmail').value = '';
+  document.getElementById('reviewComment').value = '';
+  document.getElementById('reviewImage').value = '';
+  
+  selectedRating = 0;
+  updateStars(0);
+});
 
-          // Close modal
-          const modal = bootstrap.Modal.getInstance(document.getElementById('editProfileModal'));
-          modal.hide();
-
-          // Reload carousel
-          loadReviews();
-        } else {
-          alert('Error: ' + data.message);
-        }
-      })
-      .catch(err => {
-        console.error('Error submitting review:', err);
-        alert('Failed to submit review. Try again later.');
-      });
-  });
 });

@@ -9,19 +9,23 @@
     <link rel="icon" href="assets/icon/favicon.ico" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/updates.css">
     <link rel="stylesheet" href="css/testimonial.css">
+    <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/chatbot.css">
 
 </head>
 
@@ -35,32 +39,861 @@
     <main>
 
         <!-- === Home Section Start === -->
-        <div id="home"></div>
+        <section class="home section py-5" id="home">
+            <div class="container">
+
+                <!-- Hero Section -->
+                <div class="text-center mb-5 hero-top animate__animated animate__fadeInDown">
+                    <h1 class="fw-bold hero-heading">Your Trusted Digital Service Partner</h1>
+                    <h2 class="fw-bold text-primary">G.N Emitra</h2>
+                    <p class="text-muted hero-p">
+                        Bridging people with government services—quickly, securely, and conveniently.
+                    </p>
+                    <div class="hero-btn d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#services" class="btn btn-service px-4 animate__animated animate__zoomIn">Get a
+                            Service</a>
+                        <a href="#contact"
+                            class="btn btn-appointment px-4 animate__animated animate__zoomIn animate__delay-1s">Book
+                            Appointment</a>
+                        <a href="tel:+919999999999"
+                            class="btn btn-call px-4 animate__animated animate__zoomIn animate__delay-2s">Call Now</a>
+                    </div>
+
+                    <!-- Features -->
+                    <div
+                        class="features mt-5 d-flex flex-column flex-md-row justify-content-center gap-4 animate__animated animate__fadeInUp animate__delay-3s">
+                        <div><i class="bi bi-shield-check text-success"></i> 100% Government-approved service provider
+                        </div>
+                        <div><i class="bi bi-people text-success"></i> Serving our community with reliability and
+                            dedication</div>
+                    </div>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="row">
+                    <!-- Carousel Column -->
+                    <div class="col-lg-8 col-md-12 mb-4">
+                        <div
+                            class="carousel-container rounded shadow-sm overflow-hidden animate__animated animate__fadeInLeft animate__delay-2s">
+                            <div id="homeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <!-- Indicators -->
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+
+                                <!-- Slides -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/home-1.jpg" class="d-block w-100 img-fluid rounded"
+                                            alt="E-Mitra Services">
+                                        <div
+                                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded animate-caption">
+                                            <h5>Welcome to G.N E-Mitra</h5>
+                                            <p>Fast & Reliable Digital Services at Your Doorstep.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/home-2.jpg" class="d-block w-100 img-fluid rounded"
+                                            alt="Digital Seva Center">
+                                        <div
+                                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded animate-caption">
+                                            <h5>Government Forms & Bill Payment</h5>
+                                            <p>Get your work done hassle-free.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/home-3.jpg" class="d-block w-100 img-fluid rounded"
+                                            alt="Aadhar PAN Services">
+                                        <div
+                                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded animate-caption">
+                                            <h5>All in One Digital Help Desk</h5>
+                                            <p>From Aadhar to PAN — Everything under one roof.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"
+                                        aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon bg-dark rounded-circle p-2"
+                                        aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div
+                            class="notification-box position-relative animate__animated animate__fadeInRight animate__delay-2s">
+                            <!-- 🔔 Heading -->
+                            <h4 class="notification-heading">
+                                <i class="fa-solid fa-bell"></i> Latest Notifications
+                            </h4>
+
+                            <!-- 🔴 Badge -->
+                            <!-- <span class="badge-count">99+</span> -->
+                            <span class="badge-count" id="badgeCount">0</span>
+
+                            <!-- Auto Scrolling Notification List -->
+                            <!-- ✅ Notification Container -->
+                            <div class="notification-container mt-4">
+                                <ul class="notification-list">
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Electricity Bill payment
+                                            service is
+                                            now
+                                            available online.</span>
+                                        <span class="tag update">Update</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Apply for Ration Card
+                                            updates & new
+                                            registration easily.</span>
+                                        <span class="tag notice">Notice</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Download your Annual Bank
+                                            Statement
+                                            for
+                                            this financial year.</span>
+                                        <span class="tag update">Update</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Server maintenance
+                                            scheduled on 28
+                                            July, 2 AM - 4 AM.</span>
+                                        <span class="tag alert">Alert</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Get instant Aadhar PVC Card
+                                            printing at
+                                            our center.</span>
+                                        <span class="tag update">Update</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Never share your OTP with
+                                            anyone.</span>
+                                        <span class="tag security">Security</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Always check for https://
+                                            in the
+                                            URL
+                                            before payment.</span>
+                                        <span class="tag security">Security</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Avoid public Wi-Fi during
+                                            online
+                                            transactions.</span>
+                                        <span class="tag security">Security</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> eMitra will never ask for
+                                            your bank
+                                            details via SMS.</span>
+                                        <span class="tag security">Security</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Update your password
+                                            regularly to
+                                            stay
+                                            secure.</span>
+                                        <span class="tag security">Security</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> COVID-19 Vaccination
+                                            booking is
+                                            open
+                                            for all age groups.</span>
+                                        <span class="tag notice">Notice</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Income Certificate
+                                            applications can
+                                            be
+                                            submitted online.</span>
+                                        <span class="tag update">Update</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Scholarship Portal is now
+                                            accepting
+                                            2025-26 applications.</span>
+                                        <span class="tag notice">Notice</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Driving License Renewal can
+                                            be done
+                                            without office visit.</span>
+                                        <span class="tag update">Update</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Water Bill payment through
+                                            UPI now
+                                            available.</span>
+                                        <span class="tag update">Update</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Apply online for Birth &
+                                            Death
+                                            Certificates.</span>
+                                        <span class="tag notice">Notice</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Farmer Registration open
+                                            for crop
+                                            insurance.</span>
+                                        <span class="tag notice">Notice</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> PAN Card Correction service
+                                            available
+                                            via portal.</span>
+                                        <span class="tag update">Update</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Book your online
+                                            appointment for
+                                            eMitra
+                                            Kiosk visit.</span>
+                                        <span class="tag notice">Notice</span>
+                                    </li>
+
+                                    <li class="notification-item">
+                                        <span class="text"><i class="fa fa-caret-right"></i> Beware of fake calls
+                                            claiming to be
+                                            from support.</span>
+                                        <span class="tag alert">Alert</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
         <!-- === Home Section End === -->
+
         <!-- === About Section Start === -->
-        <div id="about"></div>
+        <section class="about section py-5" id="about">
+            <div class="container">
+
+                <!-- Heading -->
+                <div class="text-center mb-5">
+                    <h2 class="about-heading fw-bold">About Us</h2>
+                </div>
+
+                <div class="row align-items-center g-4 about-item">
+                    <!-- Left: Image Section -->
+                    <div class="col-lg-6 col-md-12 about-left">
+                        <div class="about-image-box text-center">
+                            <img src="images/shop.png" alt="E-Mitra Digital Center" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+
+                    <!-- Right: Content Section -->
+                    <div class="col-lg-6 col-md-12 about-right">
+                        <div class="about-content">
+                            <h2 class="about-title"><strong>ABOUT G.N E-MITRA</strong></h2>
+
+                            <h4 class="about-lead">
+                                <i class="fas fa-bolt"></i>
+                                G.N E-Mitra is your trusted digital service center, providing quick and secure access to
+                                essential online services.
+                            </h4>
+
+                            <p><i class="fas fa-briefcase"></i> <strong>Founded:</strong> 03 March 2017 |
+                                <strong>Entity:</strong> Proprietorship
+                            </p>
+                            <p><i class="fas fa-user-check"></i> <strong>Owner:</strong> Sameer Khan</p>
+                            <p><i class="fas fa-map-marker-alt"></i> <strong>Office Address:</strong> Sardarr Bazaar,
+                                Barli,
+                                Bhinay, Ajmer, Rajasthan – 305624</p>
+                            <p><i class="fas fa-id-card"></i> <strong>Registration:</strong> UDYAM-RJ-06-0002324 (MSME)
+                            </p>
+                            <p><i class="fas fa-people-arrows"></i> <strong>Category:</strong> Social work activities
+                                without
+                                accommodation</p>
+
+                            <p>
+                                Our mission is to make all digital and government services simple, accessible, and
+                                affordable
+                                for everyone.
+                            </p>
+
+                            <p>
+                                <i class="fas fa-bullseye"></i> <strong>Mission:</strong> To make all digital and
+                                government
+                                services simple, accessible, and affordable for everyone.
+                            </p>
+
+                            <p class="about-link">
+                                <a href="#service" class="btn btn-outline-primary btn-sm px-3 py-2 mt-2">
+                                    📋 View Our Services
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         <!-- === About Section End === -->
 
         <!-- === Service Section Start === -->
-        <div id="services"></div>
+        <section class="service section py-5 bg-white" id="service">
+            <div class="container">
 
+                <!-- Section Heading -->
+                <div class="text-center mb-5">
+                    <h2 class="about-heading fw-bold">Our Services</h2>
+                    <p class="text-muted">Explore our wide range of digital & government services designed to make life
+                        easier.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="row g-4">
+                    <!-- Service Card 1 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/electricity-bill.png" class="service-img" alt="Electricity Bill">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Electricity Bill Payment</h5>
+                                <p class="service-text">Pay electricity bills conveniently and securely for all DISCOMs
+                                    directly
+                                    at our authorized shop.</p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/money-transfer.png" class="service-img" alt="Money Transfer">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Money Transfer</h5>
+                                <p class="service-text">Send money securely across India and abroad via trusted
+                                    platforms like
+                                    UPI & Western Union.</p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/digital.png" class="service-img" alt="Aadhar PAN">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Aadhar & PAN Services</h5>
+                                <p class="service-text">Link Aadhaar with PAN & update documents quickly via
+                                    government-approved
+                                    services.</p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/government.png" class="service-img" alt="Govt Schemes">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Government Schemes</h5>
+                                <p class="service-text">Apply for central & state government schemes with ease via
+                                    official
+                                    portals.</p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/registration.png" class="service-img" alt="Registration">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Ration & Labour Registration</h5>
+                                <p class="service-text">Apply or update your Ration Card, E-Shram card, Labour
+                                    registration
+                                    easily.</p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Service Card 7 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/driving.png" class="service-img" alt="Driving License">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Driving License Renewal</h5>
+                                <p class="service-text">Renew or apply for a duplicate driving license with ease at
+                                    eMitra.</p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 8 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/certificate.png" class="service-img" alt="Certificates">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Birth & Death Certificates</h5>
+                                <p class="service-text">Get digitally signed Birth & Death certificates issued by
+                                    official
+                                    departments.</p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 9 -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="service-card">
+                            <div class="service-img-wrapper">
+                                <img src="images/mobile-app.png" class="service-img" alt="Mobile Recharge">
+                            </div>
+                            <div class="service-body">
+                                <h5 class="service-title">Mobile & DTH Recharge</h5>
+                                <p class="service-text">Recharge prepaid mobiles & DTH services instantly at our center.
+                                </p>
+                                <a href="#" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <!-- === Service Section End === -->
 
+        <!-- === Gallery Section Start === -->
+        <section class="gallery-section py-5" id="gallery">
+            <div class="container">
+
+                <!-- Heading -->
+                <div class="text-center mb-5">
+                    <h2 class="about-heading fw-bold">Our Gallery</h2>
+                    <h1 class="fw-semibold text-dark">Our Work in Action – G.N E-Mitra Photo Gallery</h1>
+                    <p class="text-muted">Welcome to our gallery! Here, you can explore real moments from G.N E-Mitra’s.
+                    </p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="filters d-flex flex-wrap justify-content-center mb-4 gap-2">
+                    <button class="btn filter-btn active" data-filter="all">All</button>
+                    <button class="btn filter-btn" data-filter="services">Services in Action</button>
+                    <button class="btn filter-btn" data-filter="office">Office Setup & Infrastructure</button>
+                    <button class="btn filter-btn" data-filter="events">Events & Awareness Drives</button>
+                    <button class="btn filter-btn" data-filter="staff">Staff & Customer Engagement</button>
+                    <button class="btn filter-btn" data-filter="certificates">Certificates & Documents Issued</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="row g-4 gallery">
+
+                    <!-- Services in Action -->
+                    <div class="col-md-4 col-sm-6 gallery-item services">
+                        <div class="card shadow-sm h-100">
+                            <img src="assets/images/gallery-images (3).jpg" card-img-top gallery-img"
+                                alt="Aadhar Update">
+                            <div class="card-body text-center">
+                                <p class="card-text">Customer updating Aadhar details.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 gallery-item services">
+                        <div class="card shadow-sm h-100">
+                            <img src="assets/images/gallery-images (5).jpg" class="card-img-top gallery-img"
+                                alt="PAN Update">
+                            <div class="card-body text-center">
+                                <p class="card-text">PAN Card correction at our desk.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 gallery-item services">
+                        <div class="card shadow-sm h-100">
+                            <img src="assets/images/gallery-images (4).jpg" class="card-img-top gallery-img"
+                                alt="Electricity Bill">
+                            <div class="card-body text-center">
+                                <p class="card-text">Electricity bill payment assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Setup -->
+                    <div class="col-md-4 col-sm-6 gallery-item office">
+                        <div class="card shadow-sm h-100">
+                            <img src="assets/images/gallery-images (2).jpg" class="card-img-top gallery-img"
+                                alt="Reception Desk">
+                            <div class="card-body text-center">
+                                <p class="card-text">Reception desk view.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 gallery-item office">
+                        <div class="card shadow-sm h-100">
+                            <img src="assets/images/gallery-images (1).jpg" class="card-img-top gallery-img"
+                                alt="Waiting Area">
+                            <div class="card-body text-center">
+                                <p class="card-text">Waiting area for customers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 gallery-item office">
+                        <div class="card shadow-sm h-100">
+                            <img src="assets/images/gallery-images (6).jpg" class="card-img-top gallery-img"
+                                alt="Computer Setup">
+                            <div class="card-body text-center">
+                                <p class="card-text">Computer setup for digital work.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- === Gallery Section End === -->
+
+        <!-- === Updates Section Start === -->
+        <section class="updates-section py-5" id="updates">
+            <div class="container">
+
+                <!-- Heading -->
+                <div class="text-center mb-5">
+                    <h2 class="about-heading fw-bold">Latest Updates</h2>
+                    <p class="text-muted">Important announcements, circulars & downloadable documents</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Updates List -->
+                    <div class="col-lg-8 col-md-12">
+                        <div class="updates-box bg-white border rounded shadow-sm p-4">
+
+                            <!-- ✅ Heading (Sticky) -->
+                            <div class="d-flex align-items-center mb-4 border-bottom pb-2"
+                                style="position: sticky; top: 0; background: white; z-index: 10; padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                                <i class="fa-solid fa-bullhorn text-primary me-2 fs-5"></i>
+                                <h4 class="fw-bold mb-0 text-dark">Latest Updates & Notices</h4>
+                            </div>
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">Scholarship 2025-26 Notice</h5>
+                                <p class="text-muted mb-2">New government scholarship applications are open till
+                                    <strong>30th
+                                        Sept 2025</strong>.
+                                </p>
+                                <div>
+                                    <a href="docs/scholarship-notice.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/scholarship-notice.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">Aadhar PVC Card Printing</h5>
+                                <p class="text-muted mb-2">Now you can print your Aadhaar PVC card directly from our
+                                    center.</p>
+                                <div>
+                                    <a href="docs/aadhar-pvc-guidelines.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/aadhar-pvc-guidelines.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">Driving License Renewal Circular</h5>
+                                <p class="text-muted mb-2">Process simplified – Submit documents online & collect
+                                    license from
+                                    office.</p>
+                                <div>
+                                    <a href="docs/dl-renewal-circular.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/dl-renewal-circular.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">Electricity Bill Online Payment</h5>
+                                <p class="text-muted mb-2">Citizens can now pay their electricity bill through UPI &
+                                    Netbanking.
+                                </p>
+                                <div>
+                                    <a href="docs/electricity-payment-guide.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/electricity-payment-guide.pdf" download
+                                        class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">Voter ID Correction Drive</h5>
+                                <p class="text-muted mb-2">Special camp for voter ID corrections till <strong>15th Oct
+                                        2025</strong>.</p>
+                                <div>
+                                    <a href="docs/voter-id-camp.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/voter-id-camp.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">E-Mitra Service Charges Revision</h5>
+                                <p class="text-muted mb-2">Updated service charges list applicable from <strong>1st Nov
+                                        2025</strong>.</p>
+                                <div>
+                                    <a href="docs/service-charges.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/service-charges.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">Ration Card Online Update</h5>
+                                <p class="text-muted mb-2">Now update ration card details without visiting the office.
+                                </p>
+                                <div>
+                                    <a href="docs/ration-update.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/ration-update.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">Jan Aadhar Card Linking</h5>
+                                <p class="text-muted mb-2">Citizens must link Jan Aadhar with bank before <strong>20th
+                                        Oct
+                                        2025</strong>.</p>
+                                <div>
+                                    <a href="docs/jan-aadhar-link.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/jan-aadhar-link.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item border-bottom pb-3 mb-3">
+                                <h5 class="fw-bold">E-Shram Card Benefits</h5>
+                                <p class="text-muted mb-2">Know the new benefits under E-Shram card 2025 scheme.</p>
+                                <div>
+                                    <a href="docs/e-shram-benefits.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/e-shram-benefits.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Update Item -->
+                            <div class="update-item">
+                                <h5 class="fw-bold">Digital Signature Certificate (DSC)</h5>
+                                <p class="text-muted mb-2">Apply or renew your DSC online without hassle.</p>
+                                <div>
+                                    <a href="docs/dsc-application.pdf" target="_blank"
+                                        class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fa-solid fa-eye"></i> View
+                                    </a>
+                                    <a href="docs/dsc-application.pdf" download class="btn btn-sm btn-primary">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- Sidebar Widget -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="updates-widget bg-white border rounded shadow-sm p-4"
+                            style="max-height: 400px; overflow-y: auto;">
+                            <!-- ✅ Heading (Sticky) -->
+                            <h5 class="fw-bold mb-3"
+                                style="position: sticky; top: 0; background: white; z-index: 10; padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                                <i class="fa-solid fa-link text-primary"></i> Quick Links
+                            </h5>
+
+                            <!-- ✅ Links -->
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-file-circle-plus text-primary me-2"></i> Apply for Birth
+                                        Certificate
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-graduation-cap text-primary me-2"></i> Check Scholarship
+                                        Status
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-calendar-check text-primary me-2"></i> Book Appointment
+                                        Online
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-building-columns text-primary me-2"></i> Pay Property Tax
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-id-card text-primary me-2"></i> Download Aadhaar PVC
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-address-card text-primary me-2"></i> Apply for Voter ID
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-car-side text-primary me-2"></i> Driving License Services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-lightbulb text-primary me-2"></i> Pay Electricity Bill
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block mb-2">
+                                        <i class="fa-solid fa-utensils text-primary me-2"></i> Ration Card Update
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none d-block">
+                                        <i class="fa-solid fa-id-badge text-primary me-2"></i> Jan Aadhar Linking
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- === Updates Section End === -->
+
         <!-- === reviews Section Start === -->
-        <section class="review section " id="review">
+        <section class="review section" id="review">
             <section class="hero d-flex align-items-start">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 text-center text-white">
-                            <h1 class="display-6 fw-bold">What customers say about us</h1>
-                            <p class="mb-0">we do our best to provide you the best experience ever</p>
-                        </div>
-                        <div class="col-12 d-flex justify-content-end rate-container">
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-review" data-bs-toggle="modal"
-                                    data-bs-target="#editProfileModal">
-                                    Add Reviews
-                                </button>
+                        <div class="row">
+
+                            <div class="col-12 text-center">
+                                <h1 class="about-heading display-6 fw-bold">What customers say about us</h1>
+                                <p class="mb-0 text-secondary">We do our best to provide you the best experience ever
+                                </p>
+                            </div>
+
+                            <div class="col-12 d-flex justify-content-end rate-container">
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-review" data-bs-toggle="modal"
+                                        data-bs-target="#editProfileModal">
+                                        Add Reviews
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,47 +1025,64 @@
             <!-- Trigger Button -->
             <!-- Modal -->
             <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
-                aria-hidden="true" ;>
-                <div class="modal-dialog odal-dialog-centered">
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-md"><!-- ✅ smaller modal -->
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="editProfileModalLabel">Add Review</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p class="text-secondary mb-4">We value your feedback! Please share your experience.</p>
 
-                            <!-- Username -->
+                        <!-- Header -->
+                        <div
+                            class="bg-primary text-white p-3 rounded-top d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 fw-bold"><i class="fa-solid fa-comment-dots me-2"></i> Share Your Review
+                            </h4>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p class="text-secondary mb-4"><i class="fa-solid fa-pen-to-square me-2"></i>We value your
+                                feedback!
+                                Please share your experience.</p>
+
+                            <!-- Name -->
                             <div class="mb-3">
-                                <label for="reviewUsername" class="form-label fw-semibold">Your Name</label>
+                                <label for="reviewUsername" class="form-label text-dark fw-semibold">
+                                    <i class="fa-solid fa-user me-2"></i>Your Name
+                                </label>
                                 <input type="text" class="form-control" id="reviewUsername"
                                     placeholder="Enter your name" required>
                             </div>
 
                             <!-- City -->
                             <div class="mb-3">
-                                <label for="reviewCity" class="form-label fw-semibold">City</label>
+                                <label for="reviewCity" class="form-label text-dark fw-semibold">
+                                    <i class="fa-solid fa-city me-2"></i>City
+                                </label>
                                 <input type="text" class="form-control" id="reviewCity" placeholder="Enter your city"
                                     required>
                             </div>
 
                             <!-- Email -->
                             <div class="mb-3">
-                                <label for="reviewEmail" class="form-label fw-semibold">Email</label>
+                                <label for="reviewEmail" class="form-label text-dark fw-semibold">
+                                    <i class="fa-solid fa-envelope me-2"></i>Email
+                                </label>
                                 <input type="email" class="form-control" id="reviewEmail" placeholder="Enter your email"
                                     required>
                             </div>
-                            <div class="row gx-5">
+
+                            <div class="row gx-4">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="reviewImage" class="form-label fw-semibold">Upload Image</label>
+                                        <label for="reviewImage" class="form-label text-dark fw-semibold">
+                                            <i class="fa-solid fa-image me-2"></i>Upload Image
+                                        </label>
                                         <input type="file" class="form-control" id="reviewImage" accept="image/*">
                                     </div>
                                 </div>
-                                <!-- Rating -->
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold mb-3">Rating</label>
+                                        <label class="form-label text-dark fw-semibold mb-2">
+                                            <i class="fa-solid fa-star me-2 text-warning"></i>Rating
+                                        </label>
                                         <div id="starRating" class="d-flex gap-1 fs-4 text-warning"
                                             style="cursor: pointer;">
                                             <i class="fa-regular fa-star"></i>
@@ -247,32 +1097,303 @@
 
                             <!-- Comment -->
                             <div class="mb-3">
-                                <label for="reviewComment" class="form-label fw-semibold">Your Review</label>
-                                <textarea class="form-control" id="reviewComment" rows="4"
+                                <label for="reviewComment" class="form-label text-dark fw-semibold">
+                                    <i class="fa-solid fa-comment me-2"></i>Your Review
+                                </label>
+                                <textarea class="form-control" id="reviewComment" rows="3"
                                     placeholder="Write your review here..." required></textarea>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <i class="fa-solid fa-xmark me-2"></i>Cancel
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                <i class="fa-solid fa-floppy-disk me-2"></i>Save
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
             </div>
             </div>
         </section>
         <!-- === reviews Section End === -->
 
         <!-- === FAQ Section Start === -->
-        <div id="faq"></div>
+        <section class="faq-section py-5" id="FAQ">
+            <div class="container faq-container animate__animated animate__fadeInUp">
+                <!-- Heading -->
+                <div class="text-center mb-5">
+                    <h2 class="about-heading display-5 fw-bold">Frequently Asked Questions</h2>
+                    <p class="text-muted">Find quick answers to common queries about our services.</p>
+                </div>
 
+                <!-- Accordion -->
+                <div class="accordion" id="accordionExample">
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What services are available at eMitra Shop?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>E-Mitra Shop</strong> offers a wide range of government and private services
+                                such as bill payments, Aadhaar services, PAN card application, utility payments,
+                                banking (CSP), ticket bookings, and more.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How can I apply for a new PAN card at eMitra?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>You can visit your nearest eMitra Shop with required documents</strong> such as
+                                Aadhaar card and passport-size photo. The operator will help you fill out the PAN
+                                application form and submit it online.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Can I pay electricity and water bills through eMitra?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Yes, you can easily pay your electricity</strong>, water, and other utility
+                                bills
+                                at any eMitra Shop. Just bring your bill number or consumer ID, and the agent will
+                                process the payment for you.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Flush -->
+                <div class="accordion accordion-flush mt-4" id="accordionFlushExample">
+                    <!-- Q4 -->
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                What are the working hours of an eMitra Shop?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Most eMitra Shops operate from 9:00 AM to 7:00 PM, Monday to Saturday. However, timings
+                                may
+                                vary depending on the location. It’s best to call your nearby eMitra center to confirm.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                Is eMitra service available on Sundays?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Some eMitra centers remain open on Sundays for limited hours. It depends on the service
+                                provider. Please check with your local eMitra operator for Sunday availability.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- === FAQ Section End === -->
 
         <!-- === Contact Section Start === -->
-        ] <div id="contact"></div>
+        <section class="contact section py-5" id="contact">
+            <div class="container contact-container">
+                <div class="text-center mb-5">
+                    <h2 class="about-heading fw-bold">Let's Connect</h2>
+                </div>
 
+                <div class="row contact-flex g-4">
+                    <!-- Left Panel: Contact Form -->
+                    <div class="col-lg-6 animate-fadeInUp">
+                        <div class="contact-left shadow-sm rounded bg-white p-4">
+                            <h2 class="contact-heading">Contact Us</h2>
+                            <p class="contact-subheading">Feel free to reach out. We'll get back to you as soon as
+                                possible!</p>
+                            <form id="contact-form" action="" method="POST" class="contact-form">
+                                <input type="text" id="name" name="user_name" class="form-control contact-input"
+                                    placeholder="Your Name" />
+                                <input type="email" id="email" name="user_email" class="form-control contact-input"
+                                    placeholder="Your Email" />
+                                <input type="text" id="phone" name="user_phone" class="form-control contact-input"
+                                    placeholder="Your Phone Number" />
+                                <textarea id="message" name="user_message" class="form-control contact-textarea"
+                                    rows="4" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn contact-button mt-2">SEND MESSAGE</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right Panel: Info -->
+                    <div class="col-lg-6 animate-slideInRight">
+                        <div class="contact-right shadow-sm rounded bg-white p-4">
+                            <h3 class="info-heading">Get in Touch</h3>
+                            <div class="row" style="display: flex; justify-content: space-around; align-items: center;">
+                                <div class="info-group col-lg-6 col-md-6 col-12" style="width: max-content;">
+                                    <h4>Opening Hours</h4>
+                                    <p><strong>Monday – Friday:</strong> 09:00 – 18:00</p>
+                                    <p><strong>Weekend:</strong> Closed</p>
+                                </div>
+
+                                <div class="info-group col-lg-6 col-md-6 col-12" style="width: max-content;">
+                                    <h4>Address</h4>
+                                    <p>Sadar Bazar, Barli, Bhinay<br>Bijainagar, Ajmer (Raj)</p>
+                                </div>
+                            </div>
+                            <div class="info-group">
+                                <h4>Support</h4>
+                                <p><i class="fa fa-envelope me-2 text-primary"></i> GNemitra@2025.in</p>
+                                <p><i class="fa fa-phone me-2 text-success"></i> +91 8949308151</p>
+                            </div>
+                            <!-- Map -->
+                            <div class="map-container mt-3">
+                                <iframe
+                                    src="https://maps.google.com/maps?q=tech%20city&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                                </iframe>
+                            </div>
+
+                            <div class="social-icons d-flex flex-wrap mt-4 gap-3">
+                                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"
+                                        alt="Facebook"></a>
+                                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png"
+                                        alt="Instagram"></a>
+                                <a href="https://x.com/" target="_blank"><img src="images/twitter.png"
+                                        alt="Twitter"></a>
+                                <a href="https://telegram.com/" target="_blank"><img src="images/telegram.png"
+                                        alt="Telegram"></a>
+                                <a href="https://whatsapp.com/" target="_blank"><img src="images/whatsapp.png"
+                                        alt="WhatsApp"></a>
+                                <a href="https://gmail.com/" target="_blank"><img src="images/email.png"
+                                        alt="Email"></a>
+                                <a href="https://youtube.com/" target="_blank"><img src="images/youtube.png"
+                                        alt="YouTube"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- === Contact Section End === -->
+        <!-- === Notification Dialogs Section Start === -->
+
+        <div id="toast-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+            <!-- ✅ Success Toast -->
+            <div class="position-fixed top-0 end-0 p-3" style="z-index: 1050">
+                <div id="successToast" class="toast align-items-center text-white bg-success border-0 shadow-lg"
+                    role="alert" data-bs-delay="2500" data-bs-autohide="true">
+                    <div class="d-flex">
+                        <div class="toast-body">✅ Message Sent Successfully!</div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ❌ Error Toast -->
+            <div class="position-fixed top-0 end-0 p-3" style="z-index: 1050">
+                <div id="errorToast" class="toast align-items-center text-white bg-danger border-0 shadow-lg"
+                    role="alert" data-bs-delay="2500" data-bs-autohide="true">
+                    <div class="d-flex">
+                        <div class="toast-body">❌ Please fill in all required fields!</div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ✅ TOAST CONTAINER -->
+        <div id="toast-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+
+            <!-- Success Toast -->
+            <div class="toast align-items-center text-white bg-success border-0 shadow-lg" id="reviewSuccessToast"
+                role="alert" data-bs-delay="3000" data-bs-autohide="true">
+                <div class="d-flex">
+                    <div class="toast-body">✅ Review submitted successfully!</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+
+            <!-- Error Toast -->
+            <div class="toast align-items-center text-white bg-danger border-0 shadow-lg" id="reviewErrorToast"
+                role="alert" data-bs-delay="3000" data-bs-autohide="true">
+                <div class="d-flex">
+                    <div class="toast-body">❌ Failed to submit review. Please try again.</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+
+            <!-- Warning Toast -->
+            <div class="toast align-items-center text-dark bg-warning border-0 shadow-lg" id="reviewWarningToast"
+                role="alert" data-bs-delay="3000" data-bs-autohide="true">
+                <div class="d-flex">
+                    <div class="toast-body">⚠️ Please fill all fields and select a rating.</div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Success Toast -->
+        <div class="position-fixed top-0 end-0 p-3" style="z-index: 1050">
+            <div id="cvToastSuccess" class="toast align-items-center text-white bg-success border-0" role="alert"
+                data-bs-autohide="true" data-bs-delay="3000">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ✅ Downloaded Successfully!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+
+            <!-- Failure Toast -->
+            <div id="cvToastFail" class="toast align-items-center text-white bg-danger border-0" role="alert"
+                data-bs-autohide="true" data-bs-delay="3000">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ❌ Download failed. Please try again.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+        <!-- === Notification Dialogs Section Start === -->
 
     </main>
     <!-- Main End -->
@@ -280,16 +1401,24 @@
     <!-- Footer Start -->
     <div id="footer"></div>
     <!-- Footer End -->
+
     <!-- Chatbot Start -->
     <div id="chatbot"></div>
     <!-- Chatbot End -->
 
     <script src="js/loadComponent.js" defer></script>
     <script src="js/main.js"></script>
-    <script src="js/header.js"></script>
+    <script src="js/header.js" defer></script>
     <script src="js/footer.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/updates.js"></script>
     <script src="js/testimonial.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 

@@ -1,196 +1,154 @@
-
-/* Service Section Style */
-.service-section {
-    padding: 60px 0;
-    padding-top: 10px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 15px;
-}
-
-.heading-service {
-    width: 100%;
-    text-align: center;
+/* === Service Section Style === */
+.service {
+  background-color: #ffffff;
 }
 
 .service-heading {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #2d3436;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-    transition: color 0.4s ease, transform 0.4s ease;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2d3436;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
-/* Decorative underline effect */
+/* Decorative underline */
 .service-heading::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 60%;
-    height: 3px;
-    background: linear-gradient(90deg, #0984e3, #6c5ce7);
-    border-radius: 5px;
-    transition: width 0.4s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #0984e3, #6c5ce7);
+  border-radius: 5px;
+  transition: width 0.4s ease;
 }
 
 .service-heading:hover {
-    color: #6c5ce7;
-    transform: translateY(-2px);
+  color: #6c5ce7;
+  transform: translateY(-2px);
 }
 
 .service-heading:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.service-item {
-    width: 23%;
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    will-change: transform;
-}
 
 .service-card {
-    background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s ease;
-    position: relative;
-    transform: translateY(0);
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 1;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-}
-
-.service-card:hover::before {
-    opacity: 1;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
 }
 
 .service-img-wrapper {
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #ecf0f1, #f7f9fb);
-    border-bottom: 1px solid #dcdde1;
-    transition: background 0.4s ease;
+  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  padding: 25px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background 0.4s ease;
 }
 
 .service-card:hover .service-img-wrapper {
-    background: linear-gradient(135deg, #dff9fb, #dfe6e9);
+  background: linear-gradient(135deg, #eaf4ff, #f9fcff);
 }
 
 .service-img {
-    height: 90px;
-    width: auto;
-    transition: transform 0.4s ease, filter 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  height: 85px;
+  transition: transform 0.4s ease, filter 0.3s ease;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
 }
 
 .service-card:hover .service-img {
-    transform: scale(1.15) rotate(2deg);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  transform: scale(1.1) rotate(3deg);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
 }
 
 .service-body {
-    padding: 18px 20px;
-    position: relative;
-    z-index: 2;
+  padding: 20px;
 }
 
 .service-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
-    font-family: 'Poppins', sans-serif;
-    transition: color 0.3s ease;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  position: relative; /* Needed for ::after positioning */
+  display: inline-block;
+  transition: color 0.3s ease;
 }
 
-.service-card:hover .service-title {
-    color: #0984e3;
+.service-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 50px; /* underline width */
+  height: 3px; /* underline height */
+  background: linear-gradient(90deg, #0984e3, #6c5ce7);
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  transform-origin: center;
 }
+
+.service-card:hover .service-title::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
 
 .service-text {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.7;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 12px;
-    transition: color 0.3s ease;
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .service-card:hover .service-text {
-    color: #333;
+  color: #333;
 }
 
 .service-link {
-    font-size: 14px;
-    color: #3498db;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3498db;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .service-link:hover {
-    color: #e67e22;
-    transform: translateX(4px);
+  color: #e67e22;
+  transform: translateX(4px);
 }
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 
 /* Animation */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.service-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
 }

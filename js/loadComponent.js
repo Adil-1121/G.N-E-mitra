@@ -1,27 +1,26 @@
-// Utility: Load HTML component and optionally run a callback after it's loaded
-function loadComponent(id, file, callback = null) {
+// Utility: Load HTML file into a container
+function loadHTML(id, file, callback = null) {
   fetch(file)
-    .then(res => res.text())
+    .then(response => {
+      if (!response.ok) throw new Error(`Failed to load ${file}`);
+      return response.text();
+    })
     .then(data => {
-      document.getElementById(id).innerHTML = data;
-      if (typeof callback === 'function') {
-        callback(); // Run JS logic after component is inserted
+      const element = document.getElementById(id);
+      if (element) {
+        element.innerHTML = data;
+        if (typeof callback === "function") callback(); // optional callback
       }
     })
-    .catch(err => {
-      console.error(`Failed to load ${file}:`, err);
+    .catch(error => {
+      console.error(error);
     });
 }
 
 // On Page Load
-window.addEventListener('DOMContentLoaded', () => {
-  loadComponent('header', 'common-component/header.html');
-  loadComponent('footer', 'common-component/footer.html');
-  loadComponent('chatbot', 'common-component/chatbot.html');
-  loadComponent('about', 'about.html');
-  loadComponent('services', 'services.html'); 
-  loadComponent('faq', 'faq.html'); 
-  loadComponent('contact', 'contact.html');
+document.addEventListener("DOMContentLoaded", () => {
+  loadHTML("header", "common-component/header.html");
+  loadHTML("footer", "common-component/footer.html");
+  loadHTML("chatbot", "common-component/chatbot.html");
+
 });
-
-

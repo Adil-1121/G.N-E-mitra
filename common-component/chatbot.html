@@ -1,27 +1,45 @@
-<!-- 📌 AI Chatbot Floating Button (Always Visible) -->
-<div class="ai-chatbot-btn" title="Ask AI Assistant" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div>
-<!-- Chatbot Interface -->
-<div class="chatbot-container" id="chatbotContainer">
-    <div class="chatbot-header">
-        <span>AI Assistant</span>
+<!-- 📌 Floating Chatbot Button -->
+<div class="ai-chatbot-btn shadow-lg animate__animated animate__fadeInRight" title="Ask AI Assistant"
+    onclick="toggleChatbot()">
+    <i class="fas fa-robot"></i>
+</div>
+
+
+<!-- 📌 Chatbot Container -->
+<div class="chatbot-container shadow-lg" id="chatbotContainer">
+    <div class="chatbot-header d-flex justify-content-between align-items-center">
+        <span><i class="fas fa-robot me-2"></i>AI Assistant</span>
         <i class="fas fa-times close-btn" onclick="toggleChatbot()"></i>
     </div>
 
     <div class="chatbot-messages" id="chatMessages">
-        <!-- Messages & Typing will appear here -->
+        <!-- Messages will appear here -->
     </div>
 
-    <div class="chatbot-input">
-        <input type="text" id="userInput" placeholder="Type your message..."
+    <div class="chatbot-input d-flex">
+        <input type="text" id="userInput" class="form-control border-0" placeholder="Type your message..."
             onkeydown="if(event.key==='Enter') sendMessage()">
-        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        <button class="btn btn-warning" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
     </div>
 </div>
 
-<!-- Detailed Button CTA -->
-<!-- 📌 MOBILE FLOATING BUTTONS -->
+<!-- 📌 Mobile Sticky Buttons -->
 <div class="mobile-sticky-cta">
-    <a href="tel:+919876543210" title="Call Now"><i class="fas fa-phone-alt"></i></a>
-    <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://maps.app/" target="_blank" title="Get Directions"><i class="fas fa-map-marker-alt"></i></a>
+    <div class="social-links">
+        <a href="tel:+919876543210" class="shadow animate__animated animate__fadeInLeft animate__delay-1s"
+            title="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+
+        <a href="https://wa.me/919876543210" target="_blank"
+            class="shadow animate__animated animate__fadeInLeft animate__delay-2s" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="https://maps.app/" target="_blank"
+            class="shadow animate__animated animate__fadeInLeft animate__delay-3s" title="Get Directions">
+            <i class="fas fa-map-marker-alt"></i>
+        </a>
+    </div>
+
 </div>
