@@ -6,10 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const toast = new bootstrap.Toast(toastEl);
   toast.show();
 }
+const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:5000'
+    : 'https://gn-emitra-backend.onrender.com';
+
 
   // Fetch and render reviews
   function loadReviews() {
-    fetch('https://gn-emitra-backend.onrender.com/api/review')
+    fetch(`${API_BASE_URL}/api/review`)
       .then(response => response.json())
       .then(reviews => {
         const filteredReviews = reviews.filter(r => r.name && r.name.trim() !== '');
@@ -34,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
             stars += i <= rating ? '<i class="fa-solid fa-star text-warning"></i>' : '<i class="fa-regular fa-star text-warning"></i>';
           }
 
-          const avatarUrl = review.image_url 
-            ? `ttps://gn-emitra-backend.onrender.com${review.image_url}` 
-            : 'https://randomuser.me/api/portraits/lego/1.jpg';
+        const avatarUrl = review.image_url 
+  ? `${API_BASE_URL}${review.image_url}` 
+  : 'https://randomuser.me/api/portraits/men/75.jpg';
 
           const carouselItem = `
             <div class="carousel-item ${activeClass}">
@@ -126,10 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
   formData.append('comment', comment);
   if (imageFile) formData.append('image', imageFile);
 
-  fetch('https://gn-emitra-backend.onrender.com/api/review', {
-    method: 'POST',
-    body: formData
-  })
+  fetch(`${API_BASE_URL}/api/review`, { method: 'POST', body: formData })
+
     .then(res => res.json())
     .then(data => {
       if (data.status === 'success') {

@@ -1,7 +1,5 @@
 // Footer animation helper
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Footer Loaded Successfully!");
-
   // Animate footer links on hover
   document.querySelectorAll(".footer-widget a").forEach(link => {
     link.addEventListener("mouseenter", () => {
