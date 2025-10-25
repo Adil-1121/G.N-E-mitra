@@ -1,5 +1,5 @@
 /* Floating Button */
-.ai-chatbot-btn {
+/* .ai-chatbot-btn {
   width: 60px;
   height: 60px;
   position: fixed;
@@ -16,11 +16,39 @@
   z-index: 1000;
   transition: all 0.3s ease;
 }
+
 .ai-chatbot-btn:hover {
   background: #ffb300;
   color: #fff;
   transform: scale(1.1);
+} */
+
+.ai-chatbot-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgb(235, 235, 235);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
+
+.chatbot-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;  /* इमेज का aspect ratio बने रहे */
+    user-select: none;    /* इमेज को select न किया जा सके */
+  }
 
 /* Chatbot Container */
 .chatbot-container {
