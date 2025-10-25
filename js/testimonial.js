@@ -13,7 +13,7 @@ const API_BASE_URL = window.location.hostname === 'localhost' || window.location
 
   // Fetch and render reviews
   function loadReviews() {
-    fetch(`${API_BASE_URL}/api/review`)
+    fetch(`${API_BASE_URL}/api/reviews`)
       .then(response => response.json())
       .then(reviews => {
         const filteredReviews = reviews.filter(r => r.name && r.name.trim() !== '');
