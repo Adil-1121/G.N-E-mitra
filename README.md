@@ -5,7 +5,7 @@ It is designed to provide **government & private services** online, along with a
 
 This project uses **HTML**, **CSS**, **JavaScript**, **Bootstrap**, **React**, **Tailwind CSS**, **Python**, and **Flask** to create a **secure, scalable, and responsive** web application.
 
-![G.N Emitra Preview](/assets/images/preview.jpg)
+![G.N Emitra Preview](/assets/images/preview.png)
 
 ---
 
@@ -20,8 +20,8 @@ The application is **fully functional**, **mobile-friendly**, and designed with 
 
 ## 📸 Live Demo
 
-🔗 [Live Demo Link](https://gn-emitra.com)  
-🔗 [Admin Panel](https://gn-emitra.com/admin) *(Login required)*
+🔗 [Live Demo Link](https://gn-emitra.netlify.app/)  
+🔗 [Admin Panel](https://admin.gnemitra.vercel.app/login) *(Login required)*
 
 ---
 
