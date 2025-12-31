@@ -60,6 +60,13 @@
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 50px rgba(108, 60, 240, 0.25);
 
+  /* Text shadows (use for subtle headings) */
+  --text-shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+  /* Overlay/translucent tokens */
+  --overlay-white-20: rgba(255, 255, 255, 0.2);
+  --overlay-white-10: rgba(255, 255, 255, 0.1);
+
   /* ===============================
      RADIUS
   =============================== */
@@ -144,12 +151,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-outline:hover {
   background: var(--primary-color);
-  color: #fff;
+  color: var(--text-light);
 }
 
 .btn-login {
   background: var(--accent-yellow);
-  color: #000;
+  color: var(--text-primary);
   padding: 10px 24px;
   border-radius: var(--radius-pill);
   font-weight: 600;
