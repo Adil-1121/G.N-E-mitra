@@ -5,6 +5,28 @@
   box-sizing: border-box;
 }
 
+/* Header Styling */
+.navbar {
+  padding: 10px 20px;
+  background: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  left: 0px;
+  z-index: 1030;
+}
+
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* Logo */
 .logo-img {
   scale: 1.2;
@@ -21,17 +43,43 @@
   color: #0d3b66;
   font-weight: 500;
   margin: 0 6px;
+  padding: 8px 16px;
+  position: relative;
   transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #7c3aed, #9333ea);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .navbar .nav-link:hover {
-  color: #1f75ff;
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
   transform: translateY(-2px);
 }
 
+.navbar .nav-link:hover::after {
+  width: 80%;
+}
+
 .navbar .nav-link.active {
-  color: #ff6600;
+  color: #7c3aed;
   font-weight: 600;
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.navbar .nav-link.active::after {
+  width: 80%;
 }
 
 /* Scrolling Banner */
