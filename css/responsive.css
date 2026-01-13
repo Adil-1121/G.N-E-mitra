@@ -550,7 +550,7 @@ Author: Sadik
 --------------------------------------------------*/
 @media (max-width: 359.98px) {
   .home {
-    margin-top: 100px;
+    margin-top: 65px;
   }
 
   .hero-top {
@@ -614,7 +614,7 @@ Author: Sadik
 --------------------------------------------------*/
 @media (min-width: 360px) and (max-width: 575.98px) {
   .home {
-    margin-top: 110px;
+    margin-top: 65px;
   }
 
   .hero-top {
@@ -672,7 +672,7 @@ Author: Sadik
 --------------------------------------------------*/
 @media (min-width: 576px) and (max-width: 767.98px) {
   .home {
-    margin-top: 120px;
+    margin-top: 65px;
   }
 
   .hero-top {
@@ -725,7 +725,7 @@ Author: Sadik
 --------------------------------------------------*/
 @media (min-width: 768px) and (max-width: 991.98px) {
   .home {
-    margin-top: 130px;
+    margin-top: 65px;
   }
 
   .hero-top {
