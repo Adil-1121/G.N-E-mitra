@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
+    link.addEventListener('click', function (event) {
       event.preventDefault();
 
       // Remove 'active' from all links
