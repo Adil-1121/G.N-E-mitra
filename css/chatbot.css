@@ -175,9 +175,10 @@
   gap: 12px;
   z-index: 9999;
 }
+
 .mobile-sticky-cta a {
-  background: #ffc107;
-  color: #212529;
+  border: 1px solid #7c3aed;
+  background: #fff;
   font-size: 20px;
   width: 52px;
   height: 52px;
@@ -186,11 +187,30 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  text-decoration: none !important;  
 }
+
+/* ✅ Default icon color */
+.mobile-sticky-cta a i {
+  color: #7c3aed;
+  transition: color 0.3s ease;
+   text-decoration: none !important;   /* ✅ icon ke niche line remove */
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
 .mobile-sticky-cta a:hover {
-  background: #ffb300;
-  color: #fff;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
   transform: scale(1.1);
+}
+
+/* ✅ Hover pe purple hat jaaye (white) */
+.mobile-sticky-cta a:hover i {
+  color: #fff;
+}
+
+.fas fa-phone-alt {
+    color: red;
 }
 /* Avatar Styles */
 .avatar-chatbot {
