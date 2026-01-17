@@ -1,28 +1,12 @@
-/* Floating Button */
-/* .ai-chatbot-btn {
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #ffc107;
-  color: #212529;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 24px;
-  z-index: 1000;
-  transition: all 0.3s ease;
+:root{
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --primary-light: #ede9fe;
+  --text-dark: #111827;
+  --white: #ffffff;
 }
 
-.ai-chatbot-btn:hover {
-  background: #ffb300;
-  color: #fff;
-  transform: scale(1.1);
-} */
-
+/* Floating Button */
 .ai-chatbot-btn {
   position: fixed;
   bottom: 20px;
@@ -30,25 +14,34 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border: 2px solid rgb(235, 235, 235);
+  background: var(--white);
+  border: 2px solid var(--primary-light);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.25);
   transition: all 0.3s ease;
 }
 
+.ai-chatbot-btn:hover {
+  background: var(--primary);
+  transform: scale(1.08);
+}
+
 .chatbot-logo {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;  /* इमेज का aspect ratio बने रहे */
-    user-select: none;    /* इमेज को select न किया जा सके */
-  }
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.ai-chatbot-btn:hover .chatbot-logo{
+  filter: brightness(0) invert(1); /* ✅ hover pe logo white */
+}
 
 /* Chatbot Container */
 .chatbot-container {
@@ -57,44 +50,47 @@
   right: 30px;
   width: 350px;
   height: 420px;
-  background: #fff;
+  background: var(--white);
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
   display: none;
   flex-direction: column;
   overflow: hidden;
-  z-index: 10000; /* ✅ keep always on top */
+  z-index: 10000;
+  border: 1px solid var(--primary-light);
 }
 
 /* Header */
 .chatbot-header {
-  background-color: #007bff;
-  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
   padding: 12px 16px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-shrink: 0; /* ✅ don't collapse */
+  flex-shrink: 0;
   z-index: 2;
 }
+
 .chatbot-header .close-btn {
   cursor: pointer;
   font-size: 18px;
   transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--white);
 }
 .chatbot-header .close-btn:hover {
-  color: #ffc107;
+  color: #faf7ff;
   transform: rotate(90deg);
 }
 
 /* Messages Area */
 .chatbot-messages {
-  flex: 1; /* ✅ full remaining height */
+  flex: 1;
   padding: 12px;
   overflow-y: auto;
-  background: #f9f9f9;
+  background: #faf7ff; /* ✅ light purple bg */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -106,6 +102,7 @@
   gap: 10px;
   animation: slideUp 0.3s ease;
 }
+
 .message.bot {
   align-self: flex-start;
 }
@@ -113,6 +110,7 @@
   align-self: flex-end;
   flex-direction: row-reverse;
 }
+
 .message .bubble {
   padding: 12px 16px;
   border-radius: 18px;
@@ -120,37 +118,46 @@
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* ✅ User bubble purple theme */
 .message.user .bubble {
-  background: #e3f2fd;
-  color: #0d47a1;
+  background: var(--primary);
+  color: var(--white);
   font-weight: 500;
 }
+
+/* ✅ Bot bubble light purple */
 .message.bot .bubble {
-  background: #f1f1f1;
-  color: #333;
+  background: var(--primary-light);
+  color: var(--text-dark);
+  border: 1px solid #ddd6fe;
 }
 
 /* Input */
 .chatbot-input {
   border-top: 1px solid #ddd;
-  background: #fff;
+  background: var(--white);
 }
 .chatbot-input input {
   font-size: 14px;
 }
 .chatbot-input button {
   border-radius: 0;
+  background: var(--primary);
+  border: none;
+  color: var(--white);
   transition: all 0.3s ease;
 }
 .chatbot-input button:hover {
-  background: #e0a800;
+  color: var(--primary-dark);
+  background: var(--white);
   transform: scale(1.05);
 }
 
 /* Typing Indicator */
 .typing {
   font-size: 13px;
-  color: #6c757d;
+  color: var(--primary-dark);
   margin-left: 42px;
   font-style: italic;
 }
@@ -159,10 +166,6 @@
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 /* Mobile Sticky Buttons */
@@ -177,8 +180,8 @@
 }
 
 .mobile-sticky-cta a {
-  border: 1px solid #7c3aed;
-  background: #fff;
+  border: 2px solid var(--primary);
+  background: var(--white);
   font-size: 20px;
   width: 52px;
   height: 52px;
@@ -187,49 +190,50 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  text-decoration: none !important;  
+  text-decoration: none !important;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.20);
 }
 
-/* ✅ Default icon color */
+/* Default icon color */
 .mobile-sticky-cta a i {
-  color: #7c3aed;
+  color: var(--primary);
   transition: color 0.3s ease;
-   text-decoration: none !important;   /* ✅ icon ke niche line remove */
+  text-decoration: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
 }
 
 .mobile-sticky-cta a:hover {
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   transform: scale(1.1);
+  border-color: transparent;
 }
 
-/* ✅ Hover pe purple hat jaaye (white) */
+/* Hover icon white */
 .mobile-sticky-cta a:hover i {
-  color: #fff;
+  color: var(--white);
 }
 
-.fas fa-phone-alt {
-    color: red;
-}
 /* Avatar Styles */
 .avatar-chatbot {
-  width: 32px;       
-  height: 32px;      
-  border-radius: 50%; 
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   background-size: cover;
   background-position: center;
-  flex-shrink: 0;   
+  flex-shrink: 0;
   margin-top: 18px;
   margin-left: 10px;
 }
+
+/* ✅ Bot icon purple */
 .avatar-chatbot i {
   font-size: 20px;
-  color: #007bff; /* bot blue */
+  color: var(--primary);
 }
 
+/* ✅ User icon dark purple */
 .message.user .avatar-chatbot i {
   font-size: 26px;
-  color: #ff6b6b; /* user red/pink */
+  color: var(--primary-dark);
 }
-
