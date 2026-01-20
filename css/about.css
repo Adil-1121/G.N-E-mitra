@@ -11,6 +11,11 @@
   overflow: hidden;
 }
 
+/* Container inside About */
+.about .container {
+  max-width: 1520px;
+}
+
 /* soft background glow */
 .about::before {
   content: "";
@@ -83,7 +88,7 @@
 /* image */
 .about-image-box img {
   width: 100%;
-  height: 505px;
+  height: 560px;
   object-fit: cover;
   display: block;
   transition: transform 0.35s ease;
@@ -109,21 +114,19 @@
 }
 
  .about-title {
-  font-size: 32px;
-  font-weight: 900;
-  color: #2b1b56;
-  margin-bottom: 14px;
-  position: relative;
-  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 10px;
+  /* line-height: 1.55; */
 } 
  .about-title::after {
   content: "";
   display: block;
   width: 65%;
-  height: 4px;
-  margin-top: 8px;
+  /* height: 4px; 
+  /* margin-top: 8px; */
   border-radius: 10px;
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  /* background: linear-gradient(90deg, #7c3aed, #8b5cf6); */
 }
 
 
