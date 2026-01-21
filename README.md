@@ -53,8 +53,8 @@ The application is **fully functional**, **mobile-friendly**, and designed with 
 | JavaScript  | Interactivity & DOM handling |
 | Bootstrap 5 | UI components |
 | React.js    | Dynamic & responsive UI |
-| Tailwind CSS| Utility-first styling |
+| Prime React| Utility-first styling |
 | Python 3.x  | Backend logic |
 | Flask       | REST API & routing |
-| SQLite/MySQL| Database storage |
+| PostgresSQL| Database storage |
 

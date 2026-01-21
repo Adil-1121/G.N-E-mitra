@@ -1,0 +1,114 @@
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# =========================
+# Python / Flask
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+env/
+ENV/
+.venv/
+
+# Flask specific
+*.log
+flask_session/
+
+# =========================
+# Node / React
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build folders
+build/
+dist/
+.next/
+out/
+
+# =========================
+# Frontend Cache
+# =========================
+.cache/
+.parcel-cache/
+.eslintcache
+
+# =========================
+# Tailwind / Vite
+# =========================
+.vite/
+.vite-cache/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Uploads / Media
+# =========================
+uploads/
+media/
+tmp/
+
+# =========================
+# Secrets & Keys
+# =========================
+*.pem
+*.key
+*.crt
+secrets/
+credentials.json
+
+# =========================
+# Testing / Coverage
+# =========================
+coverage/
+reports/
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Misc
+# =========================
+*.swp
+*.bak

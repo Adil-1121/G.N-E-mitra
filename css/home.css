@@ -20,7 +20,7 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   padding: 40px 40px 40px;
-  min-height: 65vh;
+  min-height: 90vh;
 
   /* Background settings */
   background-image: url('../images/home.png');
