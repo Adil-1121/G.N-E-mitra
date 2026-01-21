@@ -24,7 +24,7 @@
   bottom: -6px;
   transform: translateX(-50%);
   width: 190px;
-  height: 20px;
+  /* height: 20px; */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

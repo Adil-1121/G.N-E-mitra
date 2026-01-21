@@ -60,7 +60,7 @@
   border: 1px solid rgba(139, 92, 246, 0.22);
   border-radius: 26px;
   padding: 28px;
-  box-shadow: 0 25px 60px rgba(139, 92, 246, 0.18);
+  /* box-shadow: 0 25px 60px rgba(139, 92, 246, 0.18); */
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
