@@ -1,99 +1,204 @@
-/* ===== FAQ Section Styling ===== */
+/* ===== Premium FAQ Section Styling ===== */
 .faq-section {
-    background: #ffffff; /* White background */
-    padding: 80px 20px;
+    position: relative;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #fdfaff 0%, #f3ebff 100%);
+    overflow: hidden;
     font-family: 'Poppins', sans-serif;
-    color: #333;
+}
+
+/* Background Decorations */
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.faq-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(192, 132, 252, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.glow-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.glow-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #a78bfa;
+    border-radius: 50%;
+    opacity: 0.4;
+    box-shadow: 0 0 12px #a78bfa;
+}
+
+.wave-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='200' viewBox='0 0 1600 200'%3E%3Cpath d='M-400 100 Q 0 50, 400 100 T 1200 100 T 2000 100' fill='none' stroke='%237c3aed' stroke-width='1'/%3E%3Cpath d='M-400 130 Q 0 80, 400 130 T 1200 130 T 2000 130' fill='none' stroke='%237c3aed' stroke-width='1'/%3E%3Cpath d='M-400 160 Q 0 110, 400 160 T 1200 160 T 2000 160' fill='none' stroke='%237c3aed' stroke-width='1'/%3E%3C/svg%3E");
+    background-position: center bottom;
+    background-repeat: repeat-x;
+}
+
+/* Heading Styling */
+.faq-heading-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
 }
 
 .faq-heading {
-    font-size: 2.5rem;
-    background: linear-gradient(90deg, #007bff, #00c6ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    position: relative;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2e1065; /* Dark Purple */
+    margin-bottom: 12px;
 }
 
-.faq-heading::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 4px;
-    background: linear-gradient(90deg, #007bff, #00c6ff);
-    margin: 12px auto 0;
-    border-radius: 5px;
+.faq-heading span.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.faq-heading span.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: rgba(139, 92, 246, 0.2);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.faq-subtitle {
+    color: #6b7280; /* Grey */
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+/* Glassmorphism FAQ Card */
+.faq-glass-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 18px;
+    padding: 50px 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    margin: 0 auto;
 }
 
 /* Accordion Styling */
-.accordion-item {
-    border: none;
-    border-radius: 12px;
-    margin-bottom: 18px;
+.faq-accordion .accordion-item {
+    background: #ffffff;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 50px !important; /* Rounded pill shape */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     overflow: hidden;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.accordion-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
+.faq-accordion .accordion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.12);
+    border-color: rgba(139, 92, 246, 0.4);
 }
 
-.accordion-button {
-    font-size: 1rem;
+.faq-accordion .accordion-button {
+    background: #ffffff;
+    color: #2e1065;
     font-weight: 600;
-    background-color: #ffffff;
-    color: #444;
-    padding: 16px 22px;
+    font-size: 1.1rem;
+    padding: 22px 35px;
+    border: none;
+    box-shadow: none !important;
     transition: all 0.3s ease;
 }
 
-.accordion-button:not(.collapsed) {
-    color: #007bff;
-    background-color: #f1f8ff;
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+.faq-accordion .accordion-button:not(.collapsed) {
+    background: rgba(245, 243, 255, 0.95); /* Very light purple tint */
+    color: #6d28d9;
 }
 
-.accordion-button:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+/* Custom Accordion Icon */
+.faq-accordion .accordion-button::after {
+    content: '+';
+    background-image: none !important;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #7c3aed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
 }
 
-.accordion-body {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-    background: #fff;
-    padding: 20px;
-    transition: color 0.3s ease;
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    content: '^';
+    font-size: 1.4rem;
+    transform: translateY(-2px);
+    color: #6d28d9;
 }
 
-.accordion-body:hover {
-    color: #222;
-}
-
-/* Flush Accordion Custom */
-.custom-accordion-item .accordion-button {
-    border-radius: 0;
-    background: #ffffff;
-}
-
-.custom-accordion-item .accordion-button:not(.collapsed) {
-    background: #e8f4ff;
-    color: #007bff;
-}
-
-/* Bootstrap Animation Enhancements */
-.animate__fadeInUp {
-    animation-duration: 1s;
-    animation-delay: 0.2s;
+.faq-accordion .accordion-body {
+    padding: 5px 35px 30px 35px;
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.8;
+    background: rgba(245, 243, 255, 0.95);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .faq-section {
+        padding: 70px 15px;
+    }
     .faq-heading {
-        font-size: 2rem;
+        font-size: 2.4rem;
+    }
+    .faq-glass-card {
+        padding: 30px 15px;
+        border-radius: 15px;
+    }
+    .faq-accordion .accordion-button {
+        font-size: 1rem;
+        padding: 18px 25px;
+    }
+    .faq-accordion .accordion-body {
+        padding: 0 25px 20px 25px;
     }
 }

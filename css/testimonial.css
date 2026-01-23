@@ -1,104 +1,289 @@
-/* ================= Hero Section ================= */
-.hero {
-  padding: 70px 50px;
-  background: #f8f9fa;
-  position: relative;
-  min-height: 420px;
+/* ================= Premium Testimonials Section ================= */
+.review-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fdfaff 0%, #f3ebff 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* ================= Glass Card (Testimonial Card) ================= */
-.glass-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  color: #333;
-  max-width: 820px;
-  margin: 80px auto;
-  position: relative;
-  min-height: 320px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Background Sparkles / Dots */
+.review-sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.glass-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+.review-sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #7b2ff7;
+    border-radius: 50%;
+    opacity: 0.3;
+    box-shadow: 0 0 10px rgba(123, 47, 247, 0.5);
+    animation: pulseGlow 3s infinite alternate;
 }
 
-.glass-card p {
-  color: #555;
+@keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0.2; }
+    100% { transform: scale(1.5); opacity: 0.5; }
 }
 
-/* ================= Avatar ================= */
-.avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #eee;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Heading & Subtitle */
+.review-header {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
 }
 
-/* ================= Info Text ================= */
-.info {
-  margin-top: 20px;
-  font-size: 16px;
-  line-height: 1.6;
+.review-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
 }
 
-/* ================= Carousel ================= */
-.carousel-container {
-  margin-top: 28px;
+.review-subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 48px;
-  height: 48px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.3s ease-in-out;
+.review-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #a855f7;
+    border-radius: 2px;
+    opacity: 0.6;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background: rgba(0, 0, 0, 0.4);
+/* Add Review Button */
+.btn-add-review {
+    border: 2px solid #7b2ff7;
+    background: transparent;
+    color: #7b2ff7;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+    position: relative;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) brightness(2);
+.btn-add-review:hover {
+    background: linear-gradient(90deg, #7b2ff7, #a855f7);
+    color: white;
+    box-shadow: 0 10px 20px rgba(123, 47, 247, 0.2);
+    transform: translateY(-2px);
+    border-color: transparent;
 }
 
-/* ================= Add Review Button ================= */
-.btn-review {
-  background: linear-gradient(45deg, #ffb347, #ffc107);
-  border-radius: 30px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  border: none;
-  transition: all 0.3s ease-in-out;
+/* Premium Review Card */
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 22px;
+    border: 1px solid rgba(123, 47, 247, 0.1);
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    max-width: 850px;
+    margin: 20px auto;
+    position: relative;
 }
 
-.btn-review:hover {
-  background: linear-gradient(45deg, #ffb300, #ffb300);
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(231, 200, 26, 0.4);
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(123, 47, 247, 0.12);
 }
 
-/* ================= Responsive ================= */
+.profile-img-container {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    background: linear-gradient(135deg, #7b2ff7, #a855f7);
+    border-radius: 50%;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.star-rating i {
+    color: #fbbf24;
+    font-size: 0.9rem;
+    margin-right: 2px;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4b5563;
+    font-style: italic;
+}
+
+/* Carousel Controls */
+.review-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(123, 47, 247, 0.2);
+    background: #fff;
+    color: #7b2ff7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    background: #7b2ff7;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(123, 47, 247, 0.3);
+}
+
+/* Premium Modal */
+.modal-premium .modal-content {
+    border-radius: 25px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.modal-premium .modal-header {
+    background: linear-gradient(90deg, #7b2ff7, #a855f7);
+    color: white;
+    border: none;
+    padding: 25px 30px;
+}
+
+.modal-premium .modal-title {
+    font-weight: 700;
+}
+
+.modal-premium .form-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.modal-premium .form-control {
+    border-radius: 12px;
+    padding: 12px 15px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    transition: all 0.3s ease;
+}
+
+.modal-premium .form-control:focus {
+    background: #fff;
+    border-color: #a855f7;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15);
+}
+
+.modal-premium .modal-footer {
+    border: none;
+    padding: 20px 30px 30px;
+}
+
+.btn-premium-save {
+    background: linear-gradient(90deg, #7b2ff7, #a855f7);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-premium-save:hover {
+    box-shadow: 0 10px 20px rgba(123, 47, 247, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-premium-cancel {
+    background: transparent;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-premium-cancel:hover {
+    background: #f3f4f6;
+}
+
+/* Interactive Stars in Modal */
+.modal-stars i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #d1d5db;
+    transition: color 0.2s ease;
+}
+
+.modal-stars i.active {
+    color: #fbbf24;
+}
+
+/* Responsive */
+/* Premium Toasts */
+.toast {
+    border-radius: 15px !important;
+    border: none !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.toast.bg-success {
+    background: linear-gradient(90deg, #10b981, #059669) !important;
+}
+
+.toast.bg-danger {
+    background: linear-gradient(90deg, #ef4444, #dc2626) !important;
+}
+
+.toast.bg-warning {
+    background: linear-gradient(90deg, #f59e0b, #d97706) !important;
+    color: white !important;
+}
+
+.testimonial-carousel-wrapper {
+    position: relative;
+    padding: 0 20px;
+}
+
 @media (max-width: 768px) {
-  .glass-card {
-    padding: 18px;
-    min-height: auto;
-  }
-
-  .avatar {
-    width: 80px;
-    height: 80px;
-  }
+    .review-title { font-size: 2rem; }
+    .testimonial-card { padding: 30px 20px; }
+    .profile-img-container { width: 70px; height: 70px; }
 }
