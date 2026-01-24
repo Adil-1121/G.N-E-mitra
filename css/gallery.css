@@ -91,7 +91,7 @@
 }
 
 /* Gallery card premium (rounded + clean) */
-.gn-card {
+.gn-gallery .gn-card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 18px;
   padding: 14px;
@@ -100,31 +100,31 @@
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-.gn-card:hover {
+.gn-gallery .gn-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 28px 60px rgba(17, 24, 39, 0.16);
 }
 
 /* Image area */
-.gn-img {
+.gn-gallery .gn-img {
   border-radius: 14px;
   overflow: hidden;
   height: 180px;
 }
 
-.gn-img img {
+.gn-gallery .gn-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s ease;
 }
 
-.gn-card:hover .gn-img img {
+.gn-gallery .gn-card:hover .gn-img img {
   transform: scale(1.06);
 }
 
 /* Caption (bottom text like image) */
-.gn-caption {
+.gn-gallery .gn-caption {
   /* margin-top: 12px;   */
   padding: 10px 10px;
   background: rgba(255, 255, 255, 0.9);
