@@ -356,10 +356,10 @@
 
 /* Social icons */
 .gn-social {
-  margin-top: 14px;
+  margin-top:50px;
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 20px;
 }
 
 .gn-social-btn {

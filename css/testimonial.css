@@ -53,16 +53,16 @@
     font-size: 1.1rem;
     display: inline-block;
     position: relative;
-    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
-.review-subtitle::after {
+.review-subtitle::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 100px;
     height: 3px;
     background: #a855f7;
     border-radius: 2px;
