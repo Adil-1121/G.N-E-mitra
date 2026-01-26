@@ -92,6 +92,11 @@
   color: rgba(232, 220, 255, 0.92);
   letter-spacing: 0.2px;
 }
+.gn-footer-title .logo-img {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 .gn-mini-icon {
   margin-left: 10px;
   font-size: 18px;
