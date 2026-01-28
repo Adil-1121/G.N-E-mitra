@@ -48,8 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="col-md-9">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
-                                        <h5 class="mb-0 fw-bold">${t.name}</h5>
-                                        <small class="text-muted">${t.location}</small>
+                                        <div>
+                                            <small class="text-muted">${t.location}</small>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-muted">${t.name}</h5>
+                                        </div>
                                     </div>
                                     <div class="star-rating text-end">
                                         <div class="stars mb-1">${stars}</div>
