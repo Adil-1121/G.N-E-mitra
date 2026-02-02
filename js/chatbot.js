@@ -1,30 +1,83 @@
-// Toggle Chatbot Open/Close
+/* ===============================
+   DOM Ready
+================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  initTextareaBehavior();
+});
+
+/* ===============================
+   Global Constants
+================================ */
+const lineHeight = 22;
+const maxRows = 5;
+const maxHeight = lineHeight * maxRows;
+
+/* ===============================
+   Toggle Chatbot Open / Close
+================================ */
 function toggleChatbot() {
   const chatbot = document.getElementById("chatbotContainer");
   const chatMessages = document.getElementById("chatMessages");
-  const input = document.getElementById("userInput");
+  const textarea = document.getElementById("userInput");
 
   if (chatbot.style.display === "flex") {
     chatbot.style.display = "none";
-    chatMessages.innerHTML = ""; // clear messages
-    input.value = "";
+    chatMessages.innerHTML = "";
+    textarea.value = "";
+    resetTextarea();
   } else {
     chatbot.style.display = "flex";
     chatbot.style.flexDirection = "column";
-
-    // Bot welcome msg
     appendMessage("bot", "Hello! I'm your assistant. How can I help you today?");
   }
 }
 
-// Send message
+/* ===============================
+   GPT-Style Textarea Logic
+================================ */
+function initTextareaBehavior() {
+  const textarea = document.getElementById("userInput");
+
+  /* Auto grow on wrap + enter */
+  textarea.addEventListener("input", () => {
+    textarea.style.height = "auto";
+
+    if (textarea.scrollHeight <= maxHeight) {
+      textarea.style.height = textarea.scrollHeight + "px";
+      textarea.style.overflowY = "hidden";
+    } else {
+      textarea.style.height = maxHeight + "px";
+      textarea.style.overflowY = "auto";
+    }
+  });
+
+  /* ENTER = SEND | SHIFT + ENTER = NEW LINE */
+  textarea.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+}
+
+/* Reset textarea after send */
+function resetTextarea() {
+  const textarea = document.getElementById("userInput");
+  textarea.style.height = lineHeight + "px";
+  textarea.style.overflowY = "hidden";
+}
+
+/* ===============================
+   Send Message
+================================ */
 function sendMessage() {
-  const input = document.getElementById("userInput");
-  const msg = input.value.trim();
+  const textarea = document.getElementById("userInput");
+  const msg = textarea.value.trim();
   if (!msg) return;
 
   appendMessage("user", msg);
-  input.value = "";
+  textarea.value = "";
+  resetTextarea();
 
   showTypingIndicator();
 
@@ -34,22 +87,20 @@ function sendMessage() {
   }, 1000);
 }
 
-// Append message
+/* ===============================
+   Append Message
+================================ */
 function appendMessage(sender, text) {
   const chat = document.getElementById("chatMessages");
+
   const messageDiv = document.createElement("div");
   messageDiv.classList.add("message", sender);
 
-  // Avatar using Font Awesome
   const avatar = document.createElement("div");
   avatar.classList.add("avatar-chatbot");
 
   const icon = document.createElement("i");
-  if (sender === "user") {
-    icon.className = "fas fa-user"; // user icon
-  } else {
-    icon.className = "fas fa-robot"; // bot icon
-  }
+  icon.className = sender === "user" ? "fas fa-user" : "fas fa-robot";
   avatar.appendChild(icon);
 
   const bubble = document.createElement("div");
@@ -59,17 +110,21 @@ function appendMessage(sender, text) {
   messageDiv.appendChild(avatar);
   messageDiv.appendChild(bubble);
   chat.appendChild(messageDiv);
+
   chat.scrollTop = chat.scrollHeight;
 }
 
-
-// Typing indicator
+/* ===============================
+   Typing Indicator
+================================ */
 function showTypingIndicator() {
   const chat = document.getElementById("chatMessages");
+
   const typing = document.createElement("div");
   typing.classList.add("typing");
   typing.id = "typingIndicator";
   typing.textContent = "AI Assistant is typing...";
+
   chat.appendChild(typing);
   chat.scrollTop = chat.scrollHeight;
 }
@@ -79,17 +134,19 @@ function removeTypingIndicator() {
   if (typing) typing.remove();
 }
 
-// Bot replies
+/* ===============================
+   Bot Reply Logic
+================================ */
 function generateBotReply(userMessage) {
   const msg = userMessage.toLowerCase();
 
   if (msg.includes("hello") || msg.includes("hi") || msg.includes("hey")) {
     return "Hello! How can I assist you today?";
   } else if (msg.includes("how are you")) {
-    return "I'm doing great, thanks for asking! How about you?";
+    return "I'm doing great 😊 How about you?";
   } else if (msg.includes("bye") || msg.includes("goodbye")) {
-    return "Goodbye! Have a wonderful day!";
+    return "Goodbye! Have a wonderful day 🌟";
   } else {
-    return "I'm still learning. Can you rephrase or ask something else?";
+    return "I'm still learning 🤖 Can you rephrase or ask something else?";
   }
 }

@@ -84,8 +84,8 @@
   position: fixed;
   bottom: 90px;
   right: 30px;
-  width: 350px;
-  height: 420px;
+  width: 450px !important;
+  height: 500px !important;
   background: var(--white);
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
@@ -178,9 +178,13 @@
 .message .bubble {
   padding: 12px 16px;
   border-radius: 18px;
-  max-width: 75%;
   font-size: 14px;
   line-height: 1.5;
+  max-width: 75%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 /* ✅ User bubble purple theme */
@@ -219,41 +223,142 @@
   border: 1px solid #ddd6fe;
 }
 
-/* Input */
+/* Chatbot Input Wrapper */
 .chatbot-input {
-  border-top: 1px solid #ddd;
-   background: linear-gradient(
+  margin: 12px;                 /* card body se distance */
+  padding: 10px;
+  border-radius: 14px;          /* rounded container */
+  background: linear-gradient(
     135deg,
     #8b7cf6 0%,
     #7c6ae6 45%,
     #6f5be6 100%
   );
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
+
+/* Input Field */
 .chatbot-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 14px;
   font-size: 14px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #333;
 }
+
+/* Input Focus Effect */
+.chatbot-input input:focus {
+  box-shadow: 0 0 0 2px rgba(139, 124, 246, 0.4);
+}
+
+/* Send Button */
 .chatbot-input button {
-  border-radius: 0;
-   background: linear-gradient(
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: linear-gradient(
     135deg,
     #8b7cf6 0%,
     #7c6ae6 45%,
     #6f5be6 100%
   );
-  border: none;
-  color: var(--white);
+  color: #fff;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
+
+/* Button Hover */
 .chatbot-input button:hover {
-  color: var(--primary-dark);
-   background: linear-gradient(
-    135deg,
-    #8b7cf6 0%,
-    #7c6ae6 45%,
-    #6f5be6 100%
-  );
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
+
+/* Button Active */
+.chatbot-input button:active {
+  transform: scale(0.95);
+}/* Input Wrapper */
+.chatbot-input-wrapper {
+  position: relative;
+  margin: 12px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  align-items: flex-end; /* 🔥 KEY: grow upwards */
+}
+
+/* Textarea (GPT style pill) */
+.chatbot-textarea {
+  width: 100%;
+  min-height: 44px;
+  max-height: 110px; /* 🔥 5 lines × 22px */
+  padding: 12px 48px 12px 16px; /* right space for button */
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  resize: none;
+
+  line-height: 22px;
+  font-size: 14px;
+  background: transparent;
+
+  overflow-y: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Scrollbar inside textarea */
+.chatbot-textarea::-webkit-scrollbar {
+  width: 6px;
+}
+.chatbot-textarea::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+/* Send Button INSIDE input */
+.send-btn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+
+  /* 🔥 FIXED gradient */
+  background: linear-gradient(135deg, #8b7cf6, #6f5be6);
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover / Active */
+.send-btn:hover {
+  transform: scale(1.08);
+}
+.send-btn:active {
+  transform: scale(0.95);
+}
+
+/* .fas{
+  color:#7c6ae6;
+} */
 
 /* Typing Indicator */
 .typing {
@@ -339,22 +444,22 @@
   font-size: 20px;
 
   /* Soft white–lavender look like image */
-  color: #ffffff;
+  color:  rgba(124, 106, 230, 0.6);
 
   /* Subtle glow to blend with gradient UI */
-  text-shadow:
+  /* text-shadow:
     0 0 6px rgba(199, 191, 255, 0.9),
-    0 0 12px rgba(124, 106, 230, 0.6);
+    0 0 12px rgba(124, 106, 230, 0.6); */
 }
 
 /* User avatar icon */
 .message.user .avatar-chatbot i {
   font-size: 26px;
 
-  color: #ffffff;
+  color: rgba(124, 106, 230, 0.6);
 
-  text-shadow:
+  /* text-shadow:
     0 0 8px rgba(124, 106, 230, 0.9),
-    0 0 16px rgba(124, 106, 230, 0.6);
+    0 0 16px rgba(124, 106, 230, 0.6); */
 }
 
