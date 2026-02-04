@@ -16,7 +16,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(circle at top left, #3a2f62 0%, #2c274b 40%, #1d1b34 100%);
+  background: var(--color-dark-neutral);
 }
 
 /* Glow Dots */

@@ -3,7 +3,7 @@
 =========================== */
 .updates-section {
   padding: 70px 0;
-  background: radial-gradient(circle at top, #f3e8ff 0%, #ffffff 55%, #ffffff 100%);
+  background: var(--color-light-gray);
 }
 
 /* ===== Heading underline premium ===== */

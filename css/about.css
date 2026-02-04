@@ -5,7 +5,7 @@
 
 /* === About Section Base === */
 .about {
-  /* background: radial-gradient(circle at top, #f3edff 0%, #ffffff 55%, #ffffff 100%); */
+  background: var(--color-light-gray);
   padding: 70px 0;
   position: relative;
   overflow: hidden;

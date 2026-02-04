@@ -2,7 +2,7 @@
 .faq-section {
     position: relative;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #fdfaff 0%, #f3ebff 100%);
+    background: var(--color-light-gray);
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
 }

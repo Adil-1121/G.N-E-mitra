@@ -1,6 +1,6 @@
 /* ===== Premium Services Section (Same as Image) ===== */
 .service {
-  background: radial-gradient(circle at top, #f4f0ff 0%, #ffffff 55%, #ffffff 100%);
+  background: var(--color-pure-white);
   padding: 70px 0;
 }
 

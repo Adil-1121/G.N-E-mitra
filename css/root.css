@@ -1,8 +1,12 @@
 :root {
-  /* 🎨 Core Brand Colors */
-  --color-mint-green: #98FFB8;        /* Fresh Mint */
-  --color-teal: #00796B;              /* Deep Teal */
-  --color-gold: #D4AF37;              /* Metallic Gold */
+  /* 🎨 Government-Standard Brand Colors */
+  --color-deep-blue: #1e40af;         /* Deep Government Blue (Trust & Authority) */
+  --color-soft-saffron: #f59e0b;      /* Soft Saffron/Orange (Accent) */
+  --color-off-white: #fafafa;         /* Off-White Base */
+  --color-light-gray: #f3f4f6;        /* Light Gray */
+  --color-soft-blue: #eff6ff;        /* Soft Blue */
+  --color-pure-white: #ffffff;       /* Pure White for Cards */
+  --color-dark-neutral: #1f2937;     /* Dark Neutral for Footer/Header */
 
   /* 🖤 Base Background & Text Colors */
   --color-charcoal-black: #1C1C1C;    /* Dark background */
@@ -26,8 +30,8 @@
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 body {
-  background-color: var(--color-white);
-  color: var(--color-white);
+  background-color: var(--color-off-white);
+  color: var(--color-dark-neutral);
   font-family: var(--font-body);
   overflow-x: hidden;
 }
@@ -37,13 +41,13 @@ section{
   overflow-x: hidden;
 }
 h1, h2, h3 {
-  color: var(--color-gold);
+  color: var(--color-deep-blue);
   font-family: var(--font-heading-serif);
 }
 
 button.cta {
-  background-color: var(--color-mint-green);
-  color: var(--color-deep-teal);
+  background-color: var(--color-deep-blue);
+  color: var(--color-pure-white);
   border-radius: var(--border-radius-large);
   transition: var(--transition-fast);
 }
