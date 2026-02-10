@@ -24,29 +24,6 @@
   opacity: 0.25;
 }
 
-/* ================= Header Wrapper ================= */
- .review-title{
-  font-size: 40px;
-  font-weight: 800;
-  color: #1e1b4b;
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  display: inline-block;
-}
-
-.review-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 55%;
-  height: 4px;
-  border-radius: 10px;
-  background: #8b5cf6;
-}
-
-
 /* Subtitle underline already OK */
 
 /* ================= Rating ================= */
@@ -359,7 +336,6 @@
 
 /* ================= Responsive ================= */
 @media (max-width: 768px) {
-  .review-title { font-size: 2rem; }
   .testimonial-card { padding: 28px 20px; }
   .profile-img-container { width: 70px; height: 70px; }
 }

@@ -38,20 +38,44 @@
   font-family: "Poppins", "Segoe UI", sans-serif;
   position: relative;
   display: inline-block;
-  margin-bottom: 6px;
   letter-spacing: 0.5px;
 }
 
+/* underline */
 .about-heading::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: -10px;
-  transform: translateX(-50%);
-  width: 58%;
+
+  /* 🔹 60% visible initially */
+  transform: translateX(-50%) scaleX(0.6);
+  transform-origin: center;
+
+  width: 75%; /* line thodi lambi */
   height: 4px;
   border-radius: 10px;
-  background: #8b5cf6;
+
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #6366f1,
+    #a855f7
+  );
+
+  transition: transform 0.45s ease;
+}
+
+/* hover animation */
+.about-heading:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.about-subtitle {
+    color: #6b7280; /* Grey */
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 10px;
 }
 
 /* ✅ Single Premium Card (Wrap whole left+right) */
